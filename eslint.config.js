@@ -15,13 +15,9 @@ export default [
 
   // Json - Jsonc - Json5
   {
-    files: ['**/*.{json,jsonc}'],
-    languageOptions: {
-      parser: parserJsonc
-    },
-    plugins: {
-      jsonc
-    },
+    files: [ '**/*.{json,jsonc}' ],
+    languageOptions: { parser: parserJsonc },
+    plugins: { jsonc },
     rules: {
       ...jsonc.configs['flat/all'].rules,
       'jsonc/indent': [
@@ -34,7 +30,7 @@ export default [
 
   // Javascript & Typescript
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    files: [ '**/*.{js,jsx,ts,tsx}' ],
     plugins: {
       'simple-import-sort': simpleImportSort,
       'sort-keys': sortKeys
@@ -52,44 +48,41 @@ export default [
 
   // Stylistic
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
-    plugins: {
-      '@stylistic': stylistic
-    },
+    files: [ '**/*.{js,jsx,ts,tsx}' ],
+    plugins: { '@stylistic': stylistic },
     rules: {
       ...stylistic.configs['all-flat'].rules,
-      '@stylistic/indent': [
-        'error',
-        2
+      '@stylistic/array-bracket-spacing': [ 'error', 'always' ],
+      '@stylistic/array-element-newline': [ 'error', { minItems: 3 } ],
+      '@stylistic/comma-spacing': [
+        'error', {
+          after: true,
+          before: false
+        }
       ],
-      '@stylistic/linebreak-style': [
-        'error',
-        'unix'
+      '@stylistic/indent': [ 'error', 2 ],
+      '@stylistic/linebreak-style': [ 'error', 'unix' ],
+      '@stylistic/no-multi-spaces': 'error',
+      '@stylistic/no-multiple-empty-lines': [
+        'error', {
+          max: 1,
+          maxBOF: 1
+        }
       ],
-      '@stylistic/quote-props': [
-        'error',
-        'as-needed'
-      ],
-      '@stylistic/quotes': [
-        'error',
-        'single'
-      ]
+      '@stylistic/object-curly-newline': [ 'error', { multiline: true } ],
+      '@stylistic/object-curly-spacing': [ 'error', 'always' ],
+      '@stylistic/quote-props': [ 'error', 'as-needed' ],
+      '@stylistic/quotes': [ 'error', 'single' ]
     }
   },
 
   // React
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    files: [ '**/*.{js,jsx,ts,tsx}' ],
     languageOptions: {
-      globals: {
-        ...globals.browser
-      },
+      globals: { ...globals.browser },
       parser: parserTs,
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true
-        }
-      }
+      parserOptions: { ecmaFeatures: { jsx: true } }
     },
     plugins: {
       react: react,
@@ -105,13 +98,4 @@ export default [
     }
   }
 
-  /*
-   * // Prettier
-   *  {
-   *    ...pluginPrettierRec,
-   *    rules: {
-   *
-   *    },
-   *  },
-   */
 ];
