@@ -1,8 +1,8 @@
 import eslintJs from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
 import parserTs from '@typescript-eslint/parser';
-import pluginReact from 'eslint-plugin-react';
-import pluginReactHooks from 'eslint-plugin-react-hooks';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import sortKeys from 'eslint-plugin-sort-keys';
@@ -10,7 +10,6 @@ import globals from 'globals';
 import eslintTs from 'typescript-eslint';
 
 export default [
-
 
   // Javascript & Typescript
   {
@@ -72,8 +71,8 @@ export default [
       }
     },
     plugins: {
-      react: pluginReact,
-      'react-hooks': pluginReactHooks,
+      react: react,
+      'react-hooks': reactHooks,
       'react-refresh': reactRefresh
     },
     rules: {
