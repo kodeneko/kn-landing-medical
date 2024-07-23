@@ -23,7 +23,7 @@ export default [
       jsonc
     },
     rules: {
-      // ...jsonc.configs['flat/base'].rules
+      ...jsonc.configs['flat/all'].rules,
       'jsonc/indent': [
         'error',
         2,
