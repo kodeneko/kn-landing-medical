@@ -7,49 +7,54 @@ import viteLogo from '/vite.svg';
 import reactLogo from './assets/react.svg';
 
 function App () {
-  const [count, setCount] = useState(0);
+
+  const [
+    count,
+    setCount
+  ] = useState(0);
 
   return (
     <>
-
       <div>
         <a
           href="https://vitejs.dev"
-          target="_blank"
           rel="noreferrer"
+          target="_blank"
         >
           <img
-            src={viteLogo}
-            className="logo"
             alt="Vite logo"
+            className="logo"
+            src={viteLogo}
           />
         </a>
 
         <a
           href="https://react.dev"
-          target="_blank"
           rel="noreferrer"
+          target="_blank"
         >
           <img
-            src={reactLogo}
-            className="logo react"
             alt="React logo"
+            className="logo react"
+            src={reactLogo}
           />
         </a>
       </div>
 
-      <h1>Vite + React</h1>
+      <h1>
+        Vite + React
+      </h1>
 
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
-          count is 
+          count is
           {' '}
 
           {count}
         </button>
 
         <p>
-          Edit 
+          Edit
           {' '}
 
           <code>
@@ -66,6 +71,7 @@ function App () {
       </p>
     </>
   );
+
 }
 
 export default App;
