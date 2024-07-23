@@ -2,6 +2,7 @@ import eslintJs from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
 import parserTs from '@typescript-eslint/parser';
 import jsonc from 'eslint-plugin-jsonc';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
@@ -86,12 +87,14 @@ export default [
       parserOptions: { ecmaFeatures: { jsx: true } }
     },
     plugins: {
+      'jsx-a11y': jsxA11y,
       react: react,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh
     },
     rules: {
       ...react.configs.recommended.rules,
+      ...jsxA11y.flatConfigs.recommended.rules,
       'react-hooks/exhaustive-deps': 'warn',
       'react-hooks/rules-of-hooks': 'error',
       'react-refresh/only-export-components': 'warn',
