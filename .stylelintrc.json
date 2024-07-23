@@ -1,1 +1,14 @@
-{ "extends": ["stylelint-config-standard", "stylelint-config-standard-less"] }
+{ 
+  "extends": [
+    "stylelint-config-recommended", 
+    "@stylistic/stylelint-config", 
+    "stylelint-config-standard-less"
+  ], 
+  "plugins": [
+    "@stylistic/stylelint-plugin"
+  ],
+  "rules": {
+    "@stylistic/indentation": 2,
+    "@stylistic/block-closing-brace-empty-line-before": "never"
+  }
+}
