@@ -61,6 +61,7 @@ export default [
         }
       ],
       '@stylistic/indent': [ 'error', 2 ],
+      '@stylistic/jsx-max-props-per-line': [ 1, { maximum: 2 } ],
       '@stylistic/linebreak-style': [ 'error', 'unix' ],
       '@stylistic/no-multi-spaces': 'error',
       '@stylistic/no-multiple-empty-lines': [
