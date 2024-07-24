@@ -1,4 +1,4 @@
-import './index.less';
+import './assets/styles/global.less';
 
 import React from 'react';
 import ReactDOM, { Container } from 'react-dom/client';

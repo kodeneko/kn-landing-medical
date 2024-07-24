@@ -39,6 +39,7 @@
     "eslint-plugin-sort-keys": "^2.3.5",
     "globals": "^15.8.0",
     "jsonc-eslint-parser": "^2.4.0",
+    "less": "^4.2.0",
     "stylelint": "^16.7.0",
     "stylelint-config-recommended": "^14.0.1",
     "stylelint-config-standard": "^36.0.1",
