@@ -47,6 +47,15 @@ export default [
     }
   },
 
+  // Node config files
+  {
+    files: [ '**/vite.config.ts' ],
+    languageOptions: {
+      globals: { ...globals.node },
+      parser: parserTs
+    }
+  },
+
   // Stylistic
   {
     files: [ '**/*.{js,jsx,ts,tsx}' ],
@@ -61,6 +70,7 @@ export default [
           before: false
         }
       ],
+      '@stylistic/function-call-argument-newline': [ 'error', 'never' ],
       '@stylistic/indent': [ 'error', 2 ],
       '@stylistic/jsx-max-props-per-line': [ 1, { maximum: 2 } ],
       '@stylistic/linebreak-style': [ 'error', 'unix' ],
