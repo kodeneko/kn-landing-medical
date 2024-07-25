@@ -1,8 +1,13 @@
+import { MainLayout } from '@layouts';
+import { HomePage } from '@pages';
+
 const App = () => {
 
   return (
     <div>
-      App React
+      <MainLayout>
+        <HomePage></HomePage>
+      </MainLayout>
     </div>
   );
 
