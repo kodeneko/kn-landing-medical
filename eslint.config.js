@@ -64,6 +64,11 @@ export default [
       ...stylistic.configs['all-flat'].rules,
       '@stylistic/array-bracket-spacing': [ 'error', 'always' ],
       '@stylistic/array-element-newline': [ 'error', { minItems: 3 } ],
+      '@stylistic/brace-style': [
+        'error',
+        '1tbs',
+        { allowSingleLine: true }
+      ],
       '@stylistic/comma-spacing': [
         'error', {
           after: true,
@@ -83,6 +88,12 @@ export default [
       ],
       '@stylistic/object-curly-newline': [ 'error', { multiline: true } ],
       '@stylistic/object-curly-spacing': [ 'error', 'always' ],
+      '@stylistic/padded-blocks': [
+        'error', {
+          blocks: 'never',
+          classes: 'always'
+        }
+      ],
       '@stylistic/quote-props': [ 'error', 'as-needed' ],
       '@stylistic/quotes': [ 'error', 'single' ]
     }
