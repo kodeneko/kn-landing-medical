@@ -8,11 +8,10 @@ class I18nNext implements I18n {
 
   private _instance: I18nNext;
 
-  private constructor (instance: I18nNext) {
-    this._instance = instance;
+  private constructor () {
   }
 
-  public getInstance (): I18nNext {
+  static public getInstance (): I18nNext {
     if (!this._instance) {
       this._instance = new I18nNext();
     }
