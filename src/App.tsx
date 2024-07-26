@@ -1,8 +1,11 @@
 import { MainLayout } from '@layouts';
 import { HomePage } from '@pages';
 
-const App = () => {
+import { initI18n } from './i18n';
 
+initI18n();
+
+const App = () => {
   return (
     <div>
       <MainLayout>
@@ -10,7 +13,6 @@ const App = () => {
       </MainLayout>
     </div>
   );
-
 };
 
 export default App;
