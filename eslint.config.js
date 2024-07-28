@@ -76,6 +76,7 @@ export default [
           before: false
         }
       ],
+      '@stylistic/dot-location': [ 'error', 'property' ],
       '@stylistic/function-call-argument-newline': [ 'error', 'never' ],
       '@stylistic/indent': [ 'error', 2 ],
       '@stylistic/jsx-max-props-per-line': [ 1, { maximum: 2 } ],

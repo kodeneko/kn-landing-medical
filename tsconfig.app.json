@@ -26,7 +26,6 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
       "@components/*": ["src/components/*"],
       "@assets/*": ["src/assets/*"],
       "@hooks/*": ["src/hooks/*"],
@@ -36,6 +35,7 @@
       "@services/*": ["src/services/*"],
       "@store/*": ["src/store/*"],
       "@utils/*": ["src/utils/*"],
+      "@models/*": ["src/models/*"],
     },
   },
   "include": [
