@@ -1,5 +1,3 @@
-import { useTranslation } from 'react-i18next';
-
 import I18nNext from './I18nNext';
 
 const { VITE_I18N: I18N } = import.meta.env;
@@ -17,7 +15,7 @@ function initI18n () {
   getI18n().init();
 }
 
-function t (str: string, opts: { [id: string]: string }) {
+function t (str: string, opts?: { [id: string]: string }) {
   return getI18n().t(str, opts);
 }
 
