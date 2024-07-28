@@ -1,17 +1,17 @@
 import i18next from 'i18next';
-import { initReactI18next } from 'react-i18next';
+import { initReactI18next, useTranslation } from 'react-i18next';
 
 import I18n from './I18n';
 import { en, es } from './locale';
 
 class I18nNext implements I18n {
 
-  private _instance: I18nNext;
+  private static _instance: I18nNext;
 
   private constructor () {
   }
 
-  static public getInstance (): I18nNext {
+  public static getInstance (): I18nNext {
     if (!this._instance) {
       this._instance = new I18nNext();
     }
@@ -26,10 +26,20 @@ class I18nNext implements I18n {
         interpolation: { escapeValue: false },
         lng: 'en',
         resources: {
-          en,
-          es
+          en: { translation: en },
+          es: { translation: es }
         }
       });
+  }
+
+  public t(key: string, opts?: { [key: string]: string }): string {
+    const { t } = useTranslation();
+    return t(key, opts);
+  }
+
+  public changeLang(lang: string): void {
+    const { i18n } = useTranslation();
+    i18n.changeLanguage(lang);
   }
 
 }

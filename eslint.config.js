@@ -39,6 +39,7 @@ export default [
     rules: {
       ...eslintJs.configs.recommended.rules,
       ...eslintTs.configs.recommended.rules,
+      'no-unused-vars': 'off',
       'simple-import-sort/exports': 'error',
       'simple-import-sort/imports': 'error',
       'sort-imports': 'off',

@@ -1,9 +1,9 @@
 import { MainLayout } from '@layouts';
 import { HomePage } from '@pages';
 
-import { initI18n } from './i18n';
+import { getI18n } from './i18n';
 
-initI18n();
+getI18n().init();
 
 const App = () => {
   return (
