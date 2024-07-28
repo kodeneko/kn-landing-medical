@@ -1,5 +1,5 @@
-import { MainLayout } from '@layouts';
-import { HomePage } from '@pages';
+import { MainLayout } from '@layouts/index';
+import { HomePage } from '@pages/index';
 
 import { getI18n } from './i18n';
 
