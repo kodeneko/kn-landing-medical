@@ -1,1 +1,9 @@
-export { HomePage } from './home';
+export {
+  HomePage,
+  SectionContact,
+  SectionDoctors,
+  SectionInfo,
+  SectionPricing,
+  SectionServices,
+  SectionWelcome
+} from './home';
