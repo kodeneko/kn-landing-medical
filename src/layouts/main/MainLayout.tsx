@@ -1,10 +1,13 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 
 import styles from './styles.module.less';
 
-const MainLayout: React.FC<React.PropsWithChildren> = ({ children }: React.PropsWithChildren) => {
+const MainLayout: React.FC = () => {
   return (
-    <div className={styles.cont}>{ children}</div>
+    <div className={styles.cont}>
+      <Outlet />
+    </div>
   );
 };
 
