@@ -79,6 +79,7 @@ export default [
       '@stylistic/dot-location': [ 'error', 'property' ],
       '@stylistic/function-call-argument-newline': [ 'error', 'never' ],
       '@stylistic/indent': [ 'error', 2 ],
+      '@stylistic/jsx-closing-tag-location': 'error',
       '@stylistic/jsx-max-props-per-line': [ 1, { maximum: 2 } ],
       '@stylistic/linebreak-style': [ 'error', 'unix' ],
       '@stylistic/no-multi-spaces': 'error',
@@ -121,6 +122,7 @@ export default [
       'react-hooks/exhaustive-deps': 'warn',
       'react-hooks/rules-of-hooks': 'error',
       'react-refresh/only-export-components': 'warn',
+      'react/jsx-closing-tag-location': [ 1, { location: 'tag-aligned' } ],
       'react/react-in-jsx-scope': 'off'
     }
   }
