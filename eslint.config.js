@@ -39,11 +39,21 @@ export default [
     rules: {
       ...eslintJs.configs.recommended.rules,
       ...eslintTs.configs.recommended.rules,
+      'no-unused-vars': 'off',
       'simple-import-sort/exports': 'error',
       'simple-import-sort/imports': 'error',
       'sort-imports': 'off',
       'sort-keys': 'error',
       'sort-keys/sort-keys-fix': 'error'
+    }
+  },
+
+  // Node config files
+  {
+    files: [ '**/vite.config.ts' ],
+    languageOptions: {
+      globals: { ...globals.node },
+      parser: parserTs
     }
   },
 
@@ -55,13 +65,21 @@ export default [
       ...stylistic.configs['all-flat'].rules,
       '@stylistic/array-bracket-spacing': [ 'error', 'always' ],
       '@stylistic/array-element-newline': [ 'error', { minItems: 3 } ],
+      '@stylistic/brace-style': [
+        'error',
+        '1tbs',
+        { allowSingleLine: true }
+      ],
       '@stylistic/comma-spacing': [
         'error', {
           after: true,
           before: false
         }
       ],
+      '@stylistic/dot-location': [ 'error', 'property' ],
+      '@stylistic/function-call-argument-newline': [ 'error', 'never' ],
       '@stylistic/indent': [ 'error', 2 ],
+      '@stylistic/jsx-closing-tag-location': 'error',
       '@stylistic/jsx-max-props-per-line': [ 1, { maximum: 2 } ],
       '@stylistic/linebreak-style': [ 'error', 'unix' ],
       '@stylistic/no-multi-spaces': 'error',
@@ -73,6 +91,12 @@ export default [
       ],
       '@stylistic/object-curly-newline': [ 'error', { multiline: true } ],
       '@stylistic/object-curly-spacing': [ 'error', 'always' ],
+      '@stylistic/padded-blocks': [
+        'error', {
+          blocks: 'never',
+          classes: 'always'
+        }
+      ],
       '@stylistic/quote-props': [ 'error', 'as-needed' ],
       '@stylistic/quotes': [ 'error', 'single' ]
     }
@@ -98,6 +122,7 @@ export default [
       'react-hooks/exhaustive-deps': 'warn',
       'react-hooks/rules-of-hooks': 'error',
       'react-refresh/only-export-components': 'warn',
+      'react/jsx-closing-tag-location': [ 1, { location: 'tag-aligned' } ],
       'react/react-in-jsx-scope': 'off'
     }
   }
