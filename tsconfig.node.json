@@ -7,10 +7,10 @@
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
     "strict": true,
-    "noEmit": true
+    "noEmit": true,
   },
   "include": [
     "vite.config.ts",
-    ".eslintrc.mjs"
+    ".eslint.config.js"
   ]
 }
