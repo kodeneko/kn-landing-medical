@@ -18,7 +18,7 @@ class I18nNext implements I18n {
     return this._instance;
   }
 
-  init () {
+  init() {
     i18next.
       use(initReactI18next).
       init({

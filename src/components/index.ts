@@ -1,2 +1,2 @@
-export { MainBar } from './main-bar';
-export { MainFooter } from './main-footer';
+export { Logo } from './logo';
+export { MainBar, MainFooter } from './main';

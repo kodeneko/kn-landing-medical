@@ -5,12 +5,24 @@ import { defineConfig } from 'vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  css: {
+    preprocessorOptions: {
+      less: {
+        paths: [
+          path.resolve(__dirname, 'src/assets/styles'),
+          path.resolve(__dirname, 'src/assets/pics'),
+          path.resolve(__dirname, 'node_modules')
+        ]
+      }
+    }
+  },
   plugins: [ react() ],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
       '@assets': path.resolve(__dirname, './src/assets'),
       '@components': path.resolve(__dirname, './src/components'),
+      '@globals': path.resolve(__dirname, './src/globals'),
       '@hooks': path.resolve(__dirname, './src/hooks'),
       '@i18n': path.resolve(__dirname, './src/i18n'),
       '@layouts': path.resolve(__dirname, './src/layouts'),

@@ -1,0 +1,63 @@
+@import "global.less";
+
+.cont {
+  width: 100%;
+  display: flex;
+  padding: 1.25rem;
+  gap: 1.25rem;
+
+  .left,
+  .right {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+  }
+
+  .right {
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
+}
+
+.left {
+  .menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-size: 1.5rem;
+    height: 100%;
+
+    li a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 7.5rem;
+      height: 100%;
+      text-align: center;
+      transition: all 0.3s;
+
+      &:hover {
+        transform: translate(0.2rem, -0.2rem);
+        cursor: pointer;
+        color: @color-blue;
+      }
+    }
+  }
+}
+
+.right {
+  button {
+    border-radius: 0.6rem;
+    background-color: @color-blue;
+    padding: 0.6rem 1.2rem;
+    color: @color-light;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: all 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      background-color: @color-blue-dark;
+    }
+  }
+}
