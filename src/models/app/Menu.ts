@@ -1,6 +1,7 @@
 type MenuOption = {
   id: string;
-  path: string;
+  path?: string;
+  icon?: string;
 };
 
 type Menu = MenuOption[];

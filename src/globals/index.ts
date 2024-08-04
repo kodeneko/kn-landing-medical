@@ -9,3 +9,11 @@ export {
 } from './menu';
 export { default as paths } from './paths';
 export { default as router } from './routing';
+export {
+  servMenu,
+  servOptDental,
+  servOptDiag,
+  servOptMedicine,
+  servOptOphthal,
+  servOptOrtho
+} from './services';

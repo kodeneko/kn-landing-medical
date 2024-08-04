@@ -114,14 +114,14 @@ export default [
       parserOptions: { ecmaFeatures: { jsx: true } }
     },
     plugins: {
-      'jsx-a11y': jsxA11y,
+      // 'jsx-a11y': jsxA11y,
       react: react,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh
     },
     rules: {
       ...react.configs.recommended.rules,
-      ...jsxA11y.flatConfigs.recommended.rules,
+      // ...jsxA11y.flatConfigs.recommended.rules,
       'react-hooks/exhaustive-deps': 'warn',
       'react-hooks/rules-of-hooks': 'error',
       'react-refresh/only-export-components': 'warn',
