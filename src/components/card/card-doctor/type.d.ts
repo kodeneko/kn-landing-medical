@@ -1,8 +1,9 @@
 import { BtnType, FormType, Menu, SizeType } from '@models/app';
 
-type SelectorCapsuleProps = {
-  options: Menu;
-  onClick: (idOpt: string) => void;
+type CardDoctorProps = {
+  pic: string;
+  name: string;
+  surname: string;
 };
 
-export default SelectorCapsuleProps;
+export default CardDoctorProps;
