@@ -2,7 +2,7 @@ import { Title } from '@components/index';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  argTypes: { backgroundColor: { control: 'color' } },
+  argTypes: { },
   args: { title: 'Lorem' },
   component: Title,
   parameters: { layout: 'centered' },
