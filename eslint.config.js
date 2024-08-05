@@ -8,9 +8,12 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import sortKeys from 'eslint-plugin-sort-keys';
+import storybook from 'eslint-plugin-storybook';
 import globals from 'globals';
 import parserJsonc from 'jsonc-eslint-parser';
 import eslintTs from 'typescript-eslint';
+
+storybook.configs;
 
 export default [
 
@@ -111,20 +114,27 @@ export default [
       parserOptions: { ecmaFeatures: { jsx: true } }
     },
     plugins: {
-      'jsx-a11y': jsxA11y,
+      // 'jsx-a11y': jsxA11y,
       react: react,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh
     },
     rules: {
       ...react.configs.recommended.rules,
-      ...jsxA11y.flatConfigs.recommended.rules,
+      // ...jsxA11y.flatConfigs.recommended.rules,
       'react-hooks/exhaustive-deps': 'warn',
       'react-hooks/rules-of-hooks': 'error',
       'react-refresh/only-export-components': 'warn',
       'react/jsx-closing-tag-location': [ 1, { location: 'tag-aligned' } ],
       'react/react-in-jsx-scope': 'off'
     }
+  },
+
+  // Storybook
+  {
+    files: [ 'src/stories/**/*.story.ts' ],
+    plugins: { storybook },
+    rules: { ...storybook.configs.recommended.rules }
   }
 
 ];

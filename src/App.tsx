@@ -1,17 +1,10 @@
-import { MainLayout } from '@layouts/index';
-import { HomePage } from '@pages/index';
+import './fontawesome.ts';
 
-import { getI18n } from './i18n';
-
-getI18n().init();
+import { Outlet } from 'react-router-dom';
 
 const App = () => {
   return (
-    <div>
-      <MainLayout>
-        <HomePage></HomePage>
-      </MainLayout>
-    </div>
+    <Outlet />
   );
 };
 

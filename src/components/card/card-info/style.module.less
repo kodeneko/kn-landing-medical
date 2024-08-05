@@ -1,0 +1,44 @@
+@import "global.less";
+
+.cont {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 0 0.7rem 0.1rem @color-blue-trans-02;
+  padding: 1.25rem;
+  padding-bottom: 2.5rem;
+  font-size: 1.25rem;
+
+  &.grad {
+    background: @color-blue-grad;
+    color: @color-light;
+  }
+
+  &.shadow {
+    background-color: @color-light;
+    color: @color-dark;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+
+  .title {
+    flex-grow: 1;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 800px) {
+  .cont {
+    padding-bottom: 1.25rem;
+
+    .body,
+    .footer {
+      display: none;
+    }
+  }
+}
