@@ -1,4 +1,4 @@
-export { ButtonIcon } from './btn-icon';
+export { BadgeIcon } from './badge-icon';
 export {
   CardDoctor,
   CardInfo,

@@ -1,4 +1,4 @@
-import { ButtonIcon } from '@components/btn-icon';
+import { BadgeIcon } from '@components/badge-icon';
 import { Button } from '@components/form';
 import { List } from '@components/text';
 import { t } from '@i18n/index';
@@ -25,7 +25,7 @@ const CasdPricing = ({
     <div className={stylePricing}>
       <header className={styles.header}>
         <div className={styles.icon}>
-          <ButtonIcon icon={icon} shape={FormType.CIRCLE} />
+          <BadgeIcon icon={icon} shape={FormType.CIRCLE} />
         </div>
         <div className={styles.title}>{ title }</div>
       </header>

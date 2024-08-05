@@ -1,4 +1,4 @@
-import { ButtonIcon } from '@components/btn-icon';
+import { BadgeIcon } from '@components/badge-icon';
 import { FormType } from '@models/app';
 import clsx from 'clsx';
 import React from 'react';
@@ -16,7 +16,7 @@ const CardInfo = ({ children, title, icon, gradient = false, actions }: CardInfo
     <div className={contStyles}>
       <header className={styles.header}>
         <div className={styles.title}>{title}</div>
-        <div className={styles.icon}><ButtonIcon icon={icon} shape={gradient
+        <div className={styles.icon}><BadgeIcon icon={icon} shape={gradient
           ? FormType.EMPTY
           : FormType.SQUARE} />
         </div>

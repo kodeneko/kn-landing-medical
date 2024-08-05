@@ -1,45 +1,58 @@
 @import "global.less";
 
-.btn {
+.wrap {
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all 0.3s;
+}
 
-  &:hover {
-    cursor: pointer;
-    background-color: @color-blue-dark;
-  }
-
+// Type
+.wrap.reg {
   &.circle,
   &.square {
-    border: none;
     background-color: @color-blue;
-    color: @color-light;
 
-    &.icon {
+    .icon {
       color: @color-light;
     }
   }
+}
 
-  &.empty {
-    background-color: transparent;
+.wrap.invert {
+  &.circle,
+  &.square {
+    background-color: @color-light;
 
-    &.icon {
+    .icon {
       color: @color-blue;
     }
   }
 }
 
-.btn.circle {
+.wrap.empty {
+  background-color: transparent;
+
+  &.reg .icon {
+    color: @color-blue;
+  }
+
+  &.invert .icon {
+    color: @color-light;
+  }
+}
+
+// Shape
+.wrap.circle {
   border-radius: 50%;
 }
 
-.btn.square {
+.wrap.square {
   border-radius: 0.6rem;
 }
 
-.btn.md {
+// Size
+.wrap.md {
   height: 2.6rem;
   width: 2.6rem;
 
@@ -48,11 +61,11 @@
   }
 }
 
-.btn.lg {
+.wrap.lg {
   height: 4rem;
   width: 4rem;
 
   .icon {
-    height: 2.6rem;
+    height: 2.4rem;
   }
 }

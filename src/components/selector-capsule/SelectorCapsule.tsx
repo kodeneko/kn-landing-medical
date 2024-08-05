@@ -1,4 +1,4 @@
-import { ButtonIcon } from '@components/btn-icon';
+import { BadgeIcon } from '@components/badge-icon';
 import useMedia from '@hooks/useMedia';
 import { t } from '@i18n/index';
 import { BtnType, FormType, SizeType } from '@models/app';
@@ -17,7 +17,7 @@ const SelectorCapsule = ({ options, onClick }: SelectorCapsuleProps) => {
         onClick={() => onClick(opt.id)}
       >
         <div className={styles.icon}>
-          <ButtonIcon
+          <BadgeIcon
             shape={FormType.CIRCLE}
             type={BtnType.BTN}
             size={swMedia

@@ -1,4 +1,4 @@
-import { ButtonIcon } from '@components/index';
+import { BadgeIcon } from '@components/index';
 import { FormType, SizeType } from '@models/app';
 import type { Meta, StoryObj } from '@storybook/react';
 
@@ -9,11 +9,11 @@ const meta = {
     shape: FormType.CIRCLE,
     size: SizeType.MD
   },
-  component: ButtonIcon,
+  component: BadgeIcon,
   parameters: { layout: 'centered' },
   tags: [ 'autodocs' ],
-  title: 'Common/ButtonIcon'
-} satisfies Meta<typeof ButtonIcon>;
+  title: 'Common/BadgeIcon'
+} satisfies Meta<typeof BadgeIcon>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -23,6 +23,8 @@ export const ButtonCircle: Story = { };
 export const ButtonSquare: Story = { args: { shape: FormType.SQUARE } };
 
 export const ButtonEmpty: Story = { args: { shape: FormType.EMPTY } };
+
+export const ButtonInvert: Story = { args: { invert: true } };
 
 export const ButtonMd: Story = { args: { size: SizeType.MD } };
 

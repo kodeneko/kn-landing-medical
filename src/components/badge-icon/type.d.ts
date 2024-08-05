@@ -1,12 +1,10 @@
 import { BtnType, FormType, SizeType } from '@models/app';
 
-type ButtonIconProps = {
-  type?: BtnType;
+type BadgeIconProps = {
   shape?: FormType;
+  invert?: boolean;
   size?: SizeType.MD | SizeType.LG;
-  href?: string;
-  onClick?: () => void;
   icon: string;
 };
 
-export default ButtonIconProps;
+export default BadgeIconProps;
