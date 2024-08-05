@@ -20,3 +20,5 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Def: Story = { };
+
+export const Inverse: Story = { args: { inverse: true } };
