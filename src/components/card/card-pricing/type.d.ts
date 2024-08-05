@@ -1,8 +1,14 @@
 import { BtnType, FormType, Menu, SizeType } from '@models/app';
 
-type SelectorCapsuleProps = {
-  options: Menu;
-  onClick: (idOpt: string) => void;
+type CasdPricingProps = {
+  grad: boolean;
+  icon: string;
+  title: string;
+  price: number;
+  symbol: string;
+  period: string;
+  specs: string[];
+  onClick: () => void;
 };
 
-export default SelectorCapsuleProps;
+export default CasdPricingProps;
