@@ -25,7 +25,8 @@ const CasdPricing = ({
     <div className={stylePricing}>
       <header className={styles.header}>
         <div className={styles.icon}>
-          <BadgeIcon icon={icon} shape={FormType.CIRCLE} />
+          <BadgeIcon icon={icon} shape={FormType.CIRCLE}
+            invert={grad} />
         </div>
         <div className={styles.title}>{ title }</div>
       </header>
@@ -41,11 +42,13 @@ const CasdPricing = ({
           </div>
         </div>
         <div className={styles.specs}>
-          <List list={specs} />
+          <List list={specs} inverse={grad} />
         </div>
       </div>
       <footer className={styles.footer}>
-        <Button onClick={onClick}>{ t('labels.hire')}</Button>
+        <Button onClick={onClick} fullWide={grad}
+          secondary={true}>{ t('labels.hire')}
+        </Button>
       </footer>
     </div>
   );

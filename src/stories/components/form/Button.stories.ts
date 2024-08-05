@@ -21,3 +21,5 @@ export const ButtonLg: Story = { args: { size: SizeType.LG } };
 export const ButtonXl: Story = { args: { size: SizeType.XL } };
 
 export const ButtonFullWidth: Story = { args: { fullWide: true } };
+
+export const ButtonSecond: Story = { args: { secondary: true } };

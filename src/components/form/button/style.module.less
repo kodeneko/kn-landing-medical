@@ -3,8 +3,6 @@
 .btn {
   border: none;
   border-radius: 0.6rem;
-  background-color: @color-blue;
-  color: @color-light;
   font-weight: bold;
   transition: all 0.3s;
 
@@ -12,6 +10,16 @@
     cursor: pointer;
     background-color: @color-blue-dark;
   }
+}
+
+.btn.def {
+  background-color: @color-blue;
+  color: @color-light;
+}
+
+.btn.sec {
+  background-color: @color-dark;
+  color: @color-light;
 }
 
 .btn.content {
