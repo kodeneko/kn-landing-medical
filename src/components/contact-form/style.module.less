@@ -1,0 +1,20 @@
+@import "global.less";
+
+.cont {
+  background: @color-blue-grad;
+  box-shadow: 0 0 0.7rem 0.1rem @color-blue-trans;
+  border-radius: 1.25rem;
+  padding: 2.5rem;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .specs {
+    display: none;
+  }
+}

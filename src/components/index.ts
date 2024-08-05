@@ -4,6 +4,7 @@ export {
   CardInfo,
   CardPricing
 } from './card';
+export { ContactForm } from './contact-form';
 export { Button } from './form';
 export { Logo } from './logo';
 export { MainBar, MainFooter } from './main';
