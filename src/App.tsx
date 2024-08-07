@@ -1,4 +1,3 @@
-import './fontawesome.ts';
 
 import { Outlet } from 'react-router-dom';
 
