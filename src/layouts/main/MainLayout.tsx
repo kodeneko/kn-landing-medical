@@ -1,13 +1,19 @@
-import { MainBar, MainFooter } from '@components/index';
+import { MainBar, MainBarMobile, MainFooter } from '@components/index';
+import useMedia from '@hooks/useMedia';
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 
 import styles from './styles.module.less';
 
 const MainLayout: React.FC = () => {
+  const isMobile = useMedia();
   return (
     <div className={styles.cont}>
-      <div className={styles.mainBar}><MainBar /></div>
+      <div className={styles.mainBar}>
+        { isMobile
+          ? <MainBarMobile />
+          : <MainBar /> }
+      </div>
       <div className={styles.mainCont}><Outlet /></div>
       <div className={styles.mainFooter}><MainFooter /></div>
     </div>

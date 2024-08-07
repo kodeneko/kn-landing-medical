@@ -1,4 +1,5 @@
 import '@assets/styles/global.less';
+import './fontawesome.ts';
 
 import { getI18n } from '@i18n/index.ts';
 import { reduxStore } from '@store/index';
