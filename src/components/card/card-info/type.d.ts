@@ -4,8 +4,8 @@ import React from 'react';
 type CardInfoProps = {
   title: string;
   icon: string;
-  gradient: boolean;
-  actions: React.JSX.Element;
+  gradient?: boolean;
+  actions?: React.JSX.Element;
 };
 
 export default CardInfoProps;

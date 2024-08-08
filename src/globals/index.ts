@@ -1,3 +1,9 @@
+export {
+  AppoInfoOpt,
+  DoctorsInfoOpt,
+  InfoMenu,
+  PricingInfoOpt
+} from './info';
 export { mainTitle } from './literals';
 export {
   mainMenu,
