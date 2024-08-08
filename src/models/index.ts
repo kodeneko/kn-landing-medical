@@ -1,4 +1,6 @@
 export type {
+  Info,
+  InfoOpt,
   Menu,
   MenuOption
 } from './app';
