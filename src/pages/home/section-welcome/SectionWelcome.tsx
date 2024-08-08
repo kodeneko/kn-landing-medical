@@ -7,8 +7,8 @@ const SectionWelcome = () => {
   return (
     <div className={styles.cont}>
       <div className={styles.desc}>
-        <h2 className={styles.title}>{t('welcome.title')}</h2>
-        <p className={styles.txt}>{t('welcome.desc')}</p>
+        <h2 className={styles.title}>{t('welcomeSec.title')}</h2>
+        <p className={styles.txt}>{t('welcomeSec.desc')}</p>
         <div className={styles.actions}>
           <Button>{t('labels.findDoc')}</Button>
         </div>
