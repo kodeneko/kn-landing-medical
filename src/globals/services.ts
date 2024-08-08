@@ -2,7 +2,7 @@ import { Menu, MenuOption } from '@models/app';
 
 const servOptMedicine: MenuOption = {
   icon: 'fa-solid fa-capsules',
-  id: 'medicine'
+  id: 'med'
 };
 const servOptDental: MenuOption = {
   icon: 'fa-solid fa-tooth',
@@ -14,7 +14,7 @@ const servOptOrtho: MenuOption = {
 };
 const servOptOphthal: MenuOption = {
   icon: 'fa-solid fa-glasses',
-  id: 'ophthal'
+  id: 'ophtha'
 };
 const servOptDiag: MenuOption = {
   icon: 'fa-solid fa-flask',
