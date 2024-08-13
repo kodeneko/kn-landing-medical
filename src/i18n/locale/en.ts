@@ -18,7 +18,12 @@ export default {
     viewMore: 'View More',
     hire: 'Hire',
     recieveInfo: 'Recieve Info',
-    yourMail: 'Your mail'
+    yourMail: 'Your mail',
+    med: 'Medicine',
+    dental: 'Dental',
+    ortho: 'orthophedic',
+    ophtha: 'Ophthalmology',
+    diag: 'Diag. Tests'
   },
   welcomeSec: {
     title: 'Healthcare Solutions',
@@ -65,7 +70,7 @@ export default {
     }
   },
   services: {
-    medicine: {
+    med: {
       title: 'Medicine',
       desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit dictumst in ante elementum mauris erat turpiLorem ipsum dolor sit amet consectetur adipiscing elit dictumst in ante elementum mauris erat turpi'
     },
@@ -77,7 +82,7 @@ export default {
       title: 'Orthopedic',
       desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit dictumst in ante elementum mauris erat turpiLorem ipsum dolor sit amet consectetur adipiscing elit dictumst in ante elementum mauris erat turpi'
     },
-    ophta: {
+    ophtha: {
       title: 'Ophthalmology',
       desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit dictumst in ante elementum mauris erat turpiLorem ipsum dolor sit amet consectetur adipiscing elit dictumst in ante elementum mauris erat turpi'
     },

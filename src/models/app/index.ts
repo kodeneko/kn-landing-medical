@@ -4,6 +4,8 @@ export type {
   Info,
   InfoOpt,
   Menu,
-  MenuOption
+  MenuOption,
+  ServiceOpt,
+  Services
 } from './Menu';
 export { default as SizeType } from './SizeType';
