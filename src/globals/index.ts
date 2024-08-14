@@ -1,4 +1,10 @@
 export {
+  doctorMed,
+  doctorPodia,
+  doctors,
+  doctorUro
+} from './doctors';
+export {
   AppoInfoOpt,
   DoctorsInfoOpt,
   InfoMenu,
