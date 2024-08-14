@@ -12,6 +12,7 @@ interface Price {
   id: string;
   price: string;
   period: EnumPeriod;
+  icon: string;
   spec: Spec[];
 }
 

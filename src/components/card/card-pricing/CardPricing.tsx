@@ -46,8 +46,8 @@ const CasdPricing = ({
         </div>
       </div>
       <footer className={styles.footer}>
-        <Button onClick={onClick} fullWide={grad}
-          secondary={true}>{ t('labels.hire')}
+        <Button onClick={onClick} fullWide={true}
+          secondary={grad}>{ t('labels.hire')}
         </Button>
       </footer>
     </div>

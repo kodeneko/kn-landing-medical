@@ -20,6 +20,15 @@ export {
   menuOptServices
 } from './menu';
 export { default as paths } from './paths';
+export {
+  priceCopay,
+  priceFull,
+  priceList,
+  priceSupdent,
+  specsCopay,
+  specsFull,
+  specsSupdent
+} from './pricing';
 export { default as router } from './routing';
 export {
   servMenu,

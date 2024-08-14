@@ -57,6 +57,7 @@ const specsSupdent: Spec[] = [
 ];
 
 const priceCopay: Price = {
+  icon: 'fa-solid fa-credit-card',
   id: 'copay',
   period: EnumPeriod.MONTH,
   price: '50',
@@ -64,22 +65,31 @@ const priceCopay: Price = {
 };
 
 const priceFull: Price = {
-  id: 'copay',
+  icon: 'fa-solid fa-flask',
+  id: 'full',
   period: EnumPeriod.MONTH,
   price: '70',
   spec: specsFull
 };
 
 const priceSupdent: Price = {
-  id: 'copay',
+  icon: 'fa-solid fa-tooth',
+  id: 'dental',
   period: EnumPeriod.MONTH,
   price: '+20',
   spec: specsSupdent
 };
 
+const priceList = [
+  priceCopay,
+  priceFull,
+  priceSupdent
+];
+
 export {
   priceCopay,
   priceFull,
+  priceList,
   priceSupdent,
   specsCopay,
   specsFull,
