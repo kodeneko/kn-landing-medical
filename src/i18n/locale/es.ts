@@ -1,7 +1,10 @@
 /* eslint-disable sort-keys/sort-keys-fix */
 /* eslint-disable sort-keys */
 export default {
-  symbol: '$',
+  symbol: '€',
+  credits: '© Web created by Kodeneko',
+  terms: 'Terms & Conditions',
+  privacy: 'Privacy Policy',
   period: {
     month: 'Month',
     year: 'Year'

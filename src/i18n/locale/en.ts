@@ -2,6 +2,9 @@
 /* eslint-disable sort-keys */
 export default {
   symbol: '$',
+  credits: '© Web created by Kodeneko',
+  terms: 'Terms & Conditions',
+  privacy: 'Privacy Policy',
   period: {
     month: 'Month',
     year: 'Year'
