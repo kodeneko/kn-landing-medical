@@ -2,6 +2,6 @@
 @tablet: 1024px;
 @mobile: 360px;
 
-@mediaWeb: ~"(min-width: @web)";
-@mediaTablet: ~"(min-width: @tablet) and (max-width: @web)";
-@mediaMobile: ~"(min-width: @mobile) and (max-width: @tablet)";
+@mediaWeb: ~"(min-width: @{web})";
+@mediaTablet: ~"(min-width: @{tablet}) and (max-width: @{web})";
+@mediaMobile: ~"(min-width: @{mobile}) and (max-width:  @{tablet})";
