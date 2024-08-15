@@ -1,6 +1,7 @@
 @import "the-new-css-reset/css/reset.css";
 @import "colors.less";
 @import "fonts.less";
+@import "sizes.less";
 
 :root {
   font-size: 16px;
@@ -12,14 +13,14 @@ body {
   min-height: 100vh;
 }
 
-@media (min-width: 1200px) {
+@media @mediaWeb {
   font-size: 1rem;
 }
 
-@media (min-width: 1024px) {
+@media @mediaTablet {
   font-size: 1rem;
 }
 
-@media (max-width: 1024px) {
+@media @mediaMobile {
   font-size: 1rem;
 }
