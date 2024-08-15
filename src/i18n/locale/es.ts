@@ -23,8 +23,12 @@ export default {
     dental: 'Dental',
     ortho: 'orthophedic',
     ophtha: 'Ophthalmology',
-    diag: 'Diag. Tests'
+    diag: 'Diag. Tests',
+    mail: 'Mail',
+    sendMail: 'Send Mail'
   },
+  placeH: { mail: '...insert your mail' },
+  msg: { errorMail: 'The mail format is incorrect' },
   welcomeSec: {
     title: 'Healthcare Solutions',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus.'
