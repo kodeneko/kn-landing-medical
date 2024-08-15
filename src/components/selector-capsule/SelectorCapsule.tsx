@@ -1,5 +1,5 @@
 import { BadgeIcon } from '@components/badge-icon';
-import useMedia from '@hooks/useMedia';
+import { useMediaMobile } from '@hooks/useMedia';
 import { t } from '@i18n/index';
 import { FormType, SizeType } from '@models/app';
 
@@ -7,7 +7,7 @@ import styles from './style.module.less';
 import SelectorCapsuleProps from './type';
 
 const SelectorCapsule = ({ options, onClick }: SelectorCapsuleProps) => {
-  const swMedia = useMedia();
+  const swMedia = useMediaMobile();
   console.log(swMedia);
   return (
     <ul className={styles.menu}>

@@ -12,6 +12,11 @@ export {
 } from './info';
 export { mainTitle } from './literals';
 export {
+  mediaMobile,
+  mediaTablet,
+  mediaWeb
+} from './media';
+export {
   mainMenu,
   menuOptAbout,
   menuOptContact,
