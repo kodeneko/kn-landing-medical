@@ -80,7 +80,7 @@ export default [
         }
       ],
       '@stylistic/dot-location': [ 'error', 'property' ],
-      '@stylistic/function-call-argument-newline': [ 'error', 'never' ],
+      '@stylistic/function-call-argument-newline': [ 'error', 'consistent' ],
       '@stylistic/indent': [ 'error', 2 ],
       '@stylistic/jsx-closing-tag-location': 'error',
       '@stylistic/jsx-max-props-per-line': [ 1, { maximum: 2 } ],

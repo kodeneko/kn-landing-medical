@@ -1,7 +1,7 @@
 import { BadgeIcon } from '@components/badge-icon';
 import useMedia from '@hooks/useMedia';
 import { t } from '@i18n/index';
-import { BtnType, FormType, SizeType } from '@models/app';
+import { FormType, SizeType } from '@models/app';
 
 import styles from './style.module.less';
 import SelectorCapsuleProps from './type';
@@ -19,7 +19,6 @@ const SelectorCapsule = ({ options, onClick }: SelectorCapsuleProps) => {
         <div className={styles.icon}>
           <BadgeIcon
             shape={FormType.CIRCLE}
-            type={BtnType.BTN}
             size={swMedia
               ? SizeType.MD
               : SizeType.LG}

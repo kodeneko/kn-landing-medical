@@ -1,3 +1,4 @@
+import { Button } from '@components/form';
 import { Logo } from '@components/logo';
 import { mainMenu } from '@globals/menu';
 import { t } from '@i18n/index';
@@ -16,7 +17,7 @@ const MainBar = () => {
         </ul>
       </div>
       <div className={styles.right}>
-        <button>{t('labels.appointment')}</button>
+        <Button>{t('labels.appointment')}</Button>
       </div>
     </div>
   );

@@ -1,26 +1,31 @@
-import { Menu, MenuOption } from '@models/app';
+import { ServiceOpt, Services } from '@models/app';
 
-const servOptMedicine: MenuOption = {
+const servOptMedicine: ServiceOpt = {
   icon: 'fa-solid fa-capsules',
-  id: 'medicine'
+  id: 'med',
+  pic: 'medicines.png'
 };
-const servOptDental: MenuOption = {
+const servOptDental: ServiceOpt = {
   icon: 'fa-solid fa-tooth',
-  id: 'dental'
+  id: 'dental',
+  pic: 'tooth.png'
 };
-const servOptOrtho: MenuOption = {
+const servOptOrtho: ServiceOpt = {
   icon: 'fa-solid fa-crutch',
-  id: 'ortho'
+  id: 'ortho',
+  pic: 'crutch.png'
 };
-const servOptOphthal: MenuOption = {
+const servOptOphthal: ServiceOpt = {
   icon: 'fa-solid fa-glasses',
-  id: 'ophthal'
+  id: 'ophtha',
+  pic: 'internal-eye.png'
 };
-const servOptDiag: MenuOption = {
+const servOptDiag: ServiceOpt = {
   icon: 'fa-solid fa-flask',
-  id: 'diag'
+  id: 'diag',
+  pic: 'microscope.png'
 };
-const servMenu: Menu = [
+const servMenu: Services = [
   servOptMedicine,
   servOptDental,
   servOptOrtho,

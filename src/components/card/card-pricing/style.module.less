@@ -1,6 +1,8 @@
 @import "global.less";
 
 .pricing {
+  width: 100%;
+  height: 100%;
   border-radius: 1.25rem;
   display: flex;
   flex-direction: column;
@@ -46,6 +48,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  flex-grow: 1;
 
   .priceInfo {
     display: flex;
@@ -64,6 +67,8 @@
   }
 
   .specs {
+    align-self: stretch;
+    flex-grow: 1;
     padding: 1.25rem 0;
     border: 0.1rem solid @color-blue;
     border-left: none;

@@ -1,3 +1,40 @@
 .cont {
   display: flex;
+  flex-direction: column;
+  padding: 3.75rem;
+  padding-bottom: 7.5rem;
+  gap: 3.75rem;
+}
+
+.body {
+  display: flex;
+  align-self: stretch;
+  flex-grow: 1;
+
+  .gallery {
+    padding-top: 3.75rem;
+    display: flex;
+    gap: 3.75rem;
+    justify-content: center;
+    align-self: stretch;
+    flex-grow: 1;
+
+    .ele {
+      width: 350px;
+      transition: all 0.5s;
+
+      .line {
+        text-decoration: line-through;
+      }
+
+      .not {
+        display: flex;
+      }
+
+      &:hover {
+        cursor: pointer;
+        transform: translateY(-1.2rem);
+      }
+    }
+  }
 }
