@@ -22,6 +22,7 @@ const SectionPricing = () => {
           {priceList.map((p) => <li
             key={p.id}
             className={styles.ele}
+            onClick={() => setPricing(p)}
             onMouseOver={() => setPricing(p)}
           >
             <CardPricing
