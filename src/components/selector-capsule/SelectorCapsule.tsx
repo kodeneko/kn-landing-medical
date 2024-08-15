@@ -8,7 +8,6 @@ import SelectorCapsuleProps from './type';
 
 const SelectorCapsule = ({ options, onClick }: SelectorCapsuleProps) => {
   const swMedia = useMediaMobile();
-  console.log(swMedia);
   return (
     <ul className={styles.menu}>
       {options.map((opt) => <li

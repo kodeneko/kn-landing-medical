@@ -29,7 +29,6 @@ const CardInfoTime = () => {
 };
 
 const CardInfoEle = ({ id, icon, path }: MenuOption) => {
-  console.log(t(`info.${id}.desc`));
   return (
     <CardInfo
       title={t(`info.${id}.title`)}
