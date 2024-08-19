@@ -1,6 +1,6 @@
 import { Button, Field } from '@components/form';
-import useMedia from '@hooks/useMedia';
-import { t } from '@i18n/index';
+import { useMediaMobile } from '@hooks/useMedia';
+import { getT } from '@i18n/index';
 import { SizeType } from '@models/app';
 import { useFormik } from 'formik';
 import { z } from 'zod';
@@ -13,7 +13,8 @@ const ContactForm = ({
   val,
   onChange
 }: ContactFormProps) => {
-  const isMobile = useMedia();
+  const t = getT();
+  const isMobile = useMediaMobile();
   const schema = z.object({ mail: z.string().email(t('msg.errorMail')) });
   const formik = useFormik({
     initialValues: { mail: val },

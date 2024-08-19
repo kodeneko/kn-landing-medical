@@ -2,12 +2,13 @@ import { CardDoctor } from '@components/card';
 import { Button } from '@components/form';
 import { Title } from '@components/text';
 import { doctors } from '@globals/doctors';
-import { t } from '@i18n/index';
+import { getT } from '@i18n/index';
 import { SizeType } from '@models/app';
 
 import styles from './style.module.less';
 
 const SectionContact = () => {
+  const t = getT();
   return (
     <div className={styles.cont}>
       <Title

@@ -1,13 +1,14 @@
 import { CardPricing } from '@components/card';
 import { Title } from '@components/text';
 import { priceList } from '@globals/pricing';
-import { t } from '@i18n/index';
+import { getT } from '@i18n/index';
 import { Price } from '@models/Price';
 import { useState } from 'react';
 
 import styles from './style.module.less';
 
 const SectionPricing = () => {
+  const t = getT();
   const [ pricing, setPricing ] = useState<Price>(priceList[1]);
   return (
     <div className={styles.cont}>

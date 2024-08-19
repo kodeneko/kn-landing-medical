@@ -1,1 +1,6 @@
-export { default as useMedia } from './useMedia';
+export {
+  useMedia,
+  useMediaMobile,
+  useMediaTablet,
+  useMediaWeb
+} from './useMedia';

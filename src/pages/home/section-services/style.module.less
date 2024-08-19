@@ -1,3 +1,5 @@
+@import "global.less";
+
 .cont {
   display: flex;
   flex-direction: column;
@@ -38,5 +40,24 @@
 
   .footer {
     padding-top: 1.25rem;
+  }
+}
+
+@media @mediaMobile {
+  .cont {
+    gap: 1.25rem;
+    align-items: center;
+    padding: 1.25rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .opt {
+    border-radius: 2.5rem;
+    gap: 0.6rem;
+    padding: 0.6rem;
+
+    .label {
+      font-size: 1.4rem;
+    }
   }
 }

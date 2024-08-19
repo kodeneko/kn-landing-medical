@@ -1,11 +1,12 @@
 import { Button } from '@components/form';
 import { Logo } from '@components/logo';
 import { mainMenu } from '@globals/menu';
-import { t } from '@i18n/index';
+import { getT } from '@i18n/index';
 
 import styles from './style.module.less';
 
 const MainBar = () => {
+  const t = getT();
   return (
     <div className={styles.cont}>
       <div className={styles.left}>

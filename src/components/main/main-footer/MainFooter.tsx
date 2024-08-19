@@ -1,9 +1,10 @@
 import { Logo } from '@components/logo';
-import { t } from '@i18n/index';
+import { getT } from '@i18n/index';
 
 import styles from './style.module.less';
 
 const MainFooter = () => {
+  const t = getT();
   return (
     <div className={styles.cont}>
       <div className={styles.left}>

@@ -4,7 +4,12 @@
   background-color: @color-blue-light;
   padding: 3.75rem;
 
-  ul {
+  .galMobile {
+    display: grid;
+    gap: 2.5rem;
+  }
+
+  .galWeb {
     display: grid;
     gap: 2.5rem;
   }
@@ -22,23 +27,23 @@
   justify-content: center;
 }
 
-@media (min-width: 1201px) {
-  .cont ul {
+@media @mediaWeb {
+  .cont .galWeb {
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
-@media (max-width: 1200px) {
-  .cont ul {
+@media @mediaTablet {
+  .cont .galWeb {
     grid-template-rows: 2fr;
     grid-template-columns: 1fr 1fr;
   }
 }
 
-@media (max-width: 800px) {
+@media @mediaMobile {
   .cont ul {
-    grid-template-rows: 2fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
   }
 }

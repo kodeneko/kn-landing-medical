@@ -1,3 +1,5 @@
+@import "global.less";
+
 .cont {
   display: flex;
   flex-direction: column;
@@ -13,6 +15,7 @@
 
   .gallery {
     padding-top: 3.75rem;
+    flex-wrap: wrap;
     display: flex;
     gap: 3.75rem;
     justify-content: center;
@@ -34,6 +37,26 @@
       &:hover {
         cursor: pointer;
         transform: translateY(-1.2rem);
+      }
+    }
+  }
+}
+
+@media @mediaMobile {
+  .cont {
+    padding: 1.25rem;
+    gap: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .body {
+    .gallery {
+      padding-top: 0;
+      flex-direction: column;
+      gap: 2.5rem;
+
+      .ele {
+        width: auto;
       }
     }
   }

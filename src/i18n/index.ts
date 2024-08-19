@@ -15,12 +15,12 @@ function initI18n () {
   getI18n().init();
 }
 
-function t (str: string, opts?: { [id: string]: string }) {
-  return getI18n().t(str, opts);
+function getT () {
+  return getI18n().t();
 }
 
 function changeLang (lang: string) {
   return getI18n().changeLang(lang);
 }
 
-export { changeLang, getI18n, initI18n, t };
+export { changeLang, getI18n, getT, initI18n };

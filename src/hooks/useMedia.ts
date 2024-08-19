@@ -1,12 +1,30 @@
+import { mediaMobile, mediaTablet, mediaUnits, mediaWeb } from '@globals/media';
 import { useState } from 'react';
 
-function useMedia () {
-  const [ sw, setSw ] = useState<boolean>(false);
-  const mediaQueryList = window.matchMedia('(max-width: 800px)');
+function useMedia (sizeQuery: string) {
+  const mediaQueryList = window.matchMedia(sizeQuery);
+  const [ sw, setSw ] = useState<boolean>(mediaQueryList.matches);
   mediaQueryList.addEventListener('change', (event) => {
     setSw(event.matches);
   });
   return sw;
 }
 
-export default useMedia;
+function useMediaWeb () {
+  return useMedia(`(min-width: ${mediaWeb}${mediaUnits})`);
+}
+
+function useMediaTablet () {
+  return useMedia(`(min-width: ${mediaTablet}${mediaUnits}) and (max-width: ${mediaWeb - 1}${mediaUnits})`);
+}
+
+function useMediaMobile () {
+  return useMedia(`(min-width: ${mediaMobile}${mediaUnits}) and (max-width: ${mediaTablet - 1}${mediaUnits})`);
+}
+
+export {
+  useMedia,
+  useMediaMobile,
+  useMediaTablet,
+  useMediaWeb
+};
