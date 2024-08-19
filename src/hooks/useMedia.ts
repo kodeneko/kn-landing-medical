@@ -1,4 +1,4 @@
-import { mediaMobile, mediaTablet, mediaWeb } from '@globals/media';
+import { mediaMobile, mediaTablet, mediaUnits, mediaWeb } from '@globals/media';
 import { useState } from 'react';
 
 function useMedia (sizeQuery: string) {
@@ -11,15 +11,15 @@ function useMedia (sizeQuery: string) {
 }
 
 function useMediaWeb () {
-  return useMedia(`(min-width: ${mediaWeb})`);
+  return useMedia(`(min-width: ${mediaWeb}${mediaUnits})`);
 }
 
 function useMediaTablet () {
-  return useMedia(`(min-width: ${mediaTablet}) and (max-width: ${mediaWeb})`);
+  return useMedia(`(min-width: ${mediaTablet}${mediaUnits}) and (max-width: ${mediaWeb - 1}${mediaUnits})`);
 }
 
 function useMediaMobile () {
-  return useMedia(`(min-width: ${mediaMobile}) and (max-width: ${mediaTablet})`);
+  return useMedia(`(min-width: ${mediaMobile}${mediaUnits}) and (max-width: ${mediaTablet - 1}${mediaUnits})`);
 }
 
 export {

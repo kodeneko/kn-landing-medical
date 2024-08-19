@@ -1,9 +1,12 @@
-const mediaWeb = '1280px';
-const mediaTablet = '768px';
-const mediaMobile = '360px';
+const mediaUnits = 'px';
+
+const mediaWeb = 1280;
+const mediaTablet = 768;
+const mediaMobile = 360;
 
 export {
   mediaMobile,
   mediaTablet,
+  mediaUnits,
   mediaWeb
 };

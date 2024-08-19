@@ -1,17 +1,18 @@
 import { MainBar, MainBarMobile, MainFooter } from '@components/index';
-import { useMediaTablet } from '@hooks/useMedia';
+import { useMediaMobile, useMediaTablet } from '@hooks/useMedia';
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 
 import styles from './styles.module.less';
 
 const MainLayout: React.FC = () => {
-  const swScreen = useMediaTablet();
-  console.log('swScreen', swScreen);
+  const isTablet = useMediaTablet();
+  const isMobile = useMediaMobile();
+
   return (
     <div className={styles.cont}>
       <div className={styles.mainBar}>
-        { swScreen
+        { isTablet || isMobile
           ? <MainBarMobile />
           : <MainBar /> }
       </div>
