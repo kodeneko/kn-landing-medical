@@ -15,14 +15,26 @@
     display: flex;
     justify-content: center;
     gap: 2.5rem;
-
-    .specialist {
-
-    }
   }
 }
 
 .footer {
   display: flex;
   justify-content: center;
+}
+
+@media @mediaMobile {
+  .cont {
+    padding: 1.25rem;
+    padding-bottom: 2.5rem;
+    gap: 1.25rem;
+  }
+
+  .body {
+    padding-top: 0;
+
+    .gallery {
+      flex-direction: column;
+    }
+  }
 }
