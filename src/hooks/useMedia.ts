@@ -1,8 +1,8 @@
 import { mediaMobile, mediaTablet, mediaWeb } from '@globals/media';
 import { useState } from 'react';
 
-function useMedia (size: string) {
-  const mediaQueryList = window.matchMedia(`(max-width: ${size})`);
+function useMedia (sizeQuery: string) {
+  const mediaQueryList = window.matchMedia(sizeQuery);
   const [ sw, setSw ] = useState<boolean>(mediaQueryList.matches);
   mediaQueryList.addEventListener('change', (event) => {
     setSw(event.matches);
@@ -10,16 +10,16 @@ function useMedia (size: string) {
   return sw;
 }
 
-function useMediaMobile () {
-  return useMedia(mediaMobile);
+function useMediaWeb () {
+  return useMedia(`(min-width: ${mediaWeb})`);
 }
 
 function useMediaTablet () {
-  return useMedia(mediaTablet);
+  return useMedia(`(min-width: ${mediaTablet}) and (max-width: ${mediaWeb})`);
 }
 
-function useMediaWeb () {
-  return useMedia(mediaWeb);
+function useMediaMobile () {
+  return useMedia(`(min-width: ${mediaMobile}) and (max-width: ${mediaTablet})`);
 }
 
 export {

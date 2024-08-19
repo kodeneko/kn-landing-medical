@@ -47,7 +47,7 @@ const SectionServices = () => {
           <div className={styles.picWrap}>
             <img src={`/services/${opSel.pic}`} />
           </div>}
-        {isWeb && isTablet &&
+        {(isWeb || isTablet) &&
           <div className={styles.info}>
             <InfoService
               title={t(`services.${opSel.id}.title`)}
