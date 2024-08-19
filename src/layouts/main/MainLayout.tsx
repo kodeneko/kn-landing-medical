@@ -1,12 +1,12 @@
 import { MainBar, MainBarMobile, MainFooter } from '@components/index';
-import { useMediaWeb } from '@hooks/useMedia';
+import { useMediaTablet } from '@hooks/useMedia';
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 
 import styles from './styles.module.less';
 
 const MainLayout: React.FC = () => {
-  const swScreen = useMediaWeb();
+  const swScreen = useMediaTablet();
   console.log('swScreen', swScreen);
   return (
     <div className={styles.cont}>
