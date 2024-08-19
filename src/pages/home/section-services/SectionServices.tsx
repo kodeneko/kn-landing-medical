@@ -2,13 +2,15 @@ import { Button } from '@components/form';
 import { SelectorCapsule } from '@components/selector-capsule';
 import { Title } from '@components/text';
 import { servMenu } from '@globals/services';
-import { t } from '@i18n/index';
+import { useMediaTablet, useMediaWeb } from '@hooks/useMedia';
+import { getT } from '@i18n/index';
 import { ServiceOpt } from '@models/app';
 import { useState } from 'react';
 
 import styles from './style.module.less';
 
 const InfoService = ({ title, desc, onClick }) => {
+  const t = getT();
   return (
     <div className={styles.infoService}>
       <h3 className={styles.title}>{title}</h3>
@@ -21,7 +23,10 @@ const InfoService = ({ title, desc, onClick }) => {
 };
 
 const SectionServices = () => {
+  const t = getT();
   const [ opSel, setOpSel ] = useState<ServiceOpt>(servMenu[0]);
+  const isTablet = useMediaTablet();
+  const isWeb = useMediaWeb();
   const handleClick = (id: string) => {
     setOpSel(servMenu.find((op) => op.id === id) as ServiceOpt);
   };
@@ -38,16 +43,18 @@ const SectionServices = () => {
             onClick={handleClick}
           />
         </div>
-        <div className={styles.picWrap}>
-          <img src={`/services/${opSel.pic}`} />
-        </div>
-        <div className={styles.info}>
-          <InfoService
-            title={t(`services.${opSel.id}.title`)}
-            desc={t(`services.${opSel.id}.desc`)}
-            onClick={() => console.log(opSel.id)}
-          />
-        </div>
+        {isWeb &&
+          <div className={styles.picWrap}>
+            <img src={`/services/${opSel.pic}`} />
+          </div>}
+        {isWeb && isTablet &&
+          <div className={styles.info}>
+            <InfoService
+              title={t(`services.${opSel.id}.title`)}
+              desc={t(`services.${opSel.id}.desc`)}
+              onClick={() => console.log(opSel.id)}
+            />
+          </div>}
       </div>
     </div>
   );

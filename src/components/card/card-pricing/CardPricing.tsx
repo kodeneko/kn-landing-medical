@@ -1,7 +1,7 @@
 import { BadgeIcon } from '@components/badge-icon';
 import { Button } from '@components/form';
 import { List } from '@components/text';
-import { t } from '@i18n/index';
+import { getT } from '@i18n/index';
 import { FormType } from '@models/app';
 import clsx from 'clsx';
 
@@ -18,6 +18,7 @@ const CasdPricing = ({
   specs,
   onClick
 }: CasdPricingProps) => {
+  const t = getT();
   const stylePricing = clsx(styles.pricing, styles[grad
     ? 'grad'
     : 'shadow']);

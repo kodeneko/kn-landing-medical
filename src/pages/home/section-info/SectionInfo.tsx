@@ -3,12 +3,13 @@ import { Button } from '@components/form';
 import { Desc } from '@components/text';
 import { InfoMenu, OpeningInfoOpt } from '@globals/info';
 import { useMediaMobile } from '@hooks/useMedia';
-import { t } from '@i18n/index';
+import { getT } from '@i18n/index';
 import { MenuOption } from '@models/app';
 
 import styles from './style.module.less';
 
 const CardInfoTime = () => {
+  const t = getT();
   return (
     <CardInfo
       title={t(`info.${OpeningInfoOpt.id}.title`)}
@@ -30,6 +31,7 @@ const CardInfoTime = () => {
 };
 
 const CardInfoEle = ({ id, icon, path }: MenuOption) => {
+  const t = getT();
   return (
     <CardInfo
       title={t(`info.${id}.title`)}

@@ -1,9 +1,10 @@
 import { Button } from '@components/form';
-import { t } from '@i18n/index';
+import { getT } from '@i18n/index';
 
 import styles from './style.module.less';
 
 const SectionWelcome = () => {
+  const t = getT();
   return (
     <div className={styles.cont}>
       <div className={styles.desc}>
