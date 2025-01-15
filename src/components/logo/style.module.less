@@ -1,0 +1,45 @@
+@import "global.less";
+
+.cont {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.iconCont {
+  .icon {
+    height: 3rem;
+  }
+}
+
+.title {
+  font-family: "Concert One", sans-serif;
+  font-size: 2.5rem;
+}
+
+// Colors
+
+.cont.inv {
+  .iconCont {
+    .icon {
+      fill: @color-light;
+      color: @color-light;
+    }
+  }
+
+  .title {
+    color: @color-light;
+  }
+}
+
+.cont.reg {
+  .iconCont {
+    .icon {
+      fill: @color-blue;
+      color: @color-blue;
+    }
+  }
+
+  .title {
+    color: @color-blue;
+  }
+}

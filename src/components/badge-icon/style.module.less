@@ -1,0 +1,71 @@
+@import "global.less";
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+// Type
+.wrap.reg {
+  &.circle,
+  &.square {
+    background-color: @color-blue;
+
+    .icon {
+      color: @color-light;
+    }
+  }
+}
+
+.wrap.invert {
+  &.circle,
+  &.square {
+    background-color: @color-light;
+
+    .icon {
+      color: @color-blue;
+    }
+  }
+}
+
+.wrap.empty {
+  background-color: transparent;
+
+  &.reg .icon {
+    color: @color-blue;
+  }
+
+  &.invert .icon {
+    color: @color-light;
+  }
+}
+
+// Shape
+.wrap.circle {
+  border-radius: 50%;
+}
+
+.wrap.square {
+  border-radius: 0.6rem;
+}
+
+// Size
+.wrap.md {
+  height: 2.7rem;
+  width: 2.7rem;
+
+  .icon {
+    height: 1.5rem;
+  }
+}
+
+.wrap.lg {
+  height: 3.9rem;
+  width: 3.9rem;
+
+  .icon {
+    height: 2.4rem;
+  }
+}

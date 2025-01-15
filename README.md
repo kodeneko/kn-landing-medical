@@ -1,30 +1,42 @@
-# React + TypeScript + Vite
+# KN Landing Restaurant
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a single page about a fictional medical center 🏥 It's only for showcase porpouse 🖼️🪟📕
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [KN Landing Restaurant](#kn-landing-restaurant)
+  - [🗒️ 1. Description](#️-1-description)
+  - [🛠️ 2. Technologies](#️-2-technologies)
+  - [🖥️ 3. Deploy](#️-3-deploy)
+  - [🤝 4. Contribution](#-4-contribution)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🗒️ 1. Description
 
-- Configure the top-level `parserOptions` property like this:
+You can see a front-end project made by React. It's only a one page with a huge scroll. It's a fictional medical center 🏥 You can see the services which they could offer you
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## 🛠️ 2. Technologies
+
+Func ⚙️ | Tech 🛠️
+---|---
+Front-end | React
+Build | Vite
+Pack Manager | npm
+Store | Redux + toolkit
+i18n | i18next
+Routing | React Router 
+Gallery Compo | Storybook
+REST Calls | Axios
+Icons | Font Awesome
+
+
+## 🖥️ 3. Deploy
+
+```bash
+npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## 🤝 4. Contribution
+
+If you want to suggest some improvement or inform about a bug, you are welcome 👍 Make an issue and we review it together ✨

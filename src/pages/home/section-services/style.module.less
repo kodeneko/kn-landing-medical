@@ -1,3 +1,63 @@
+@import "global.less";
+
 .cont {
   display: flex;
+  flex-direction: column;
+  padding: 3.75rem 2.5rem;
+  padding-bottom: 7.5rem;
+  gap: 10rem;
+}
+
+.body {
+  display: flex;
+  align-items: center;
+  gap: 3.75rem;
+  flex-wrap: wrap;
+
+  .menu {
+    flex-shrink: 1;
+  }
+
+  .info {
+    flex: 1;
+    align-self: flex-start;
+  }
+}
+
+.infoService {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+
+  .title {
+    font-weight: bold;
+    font-size: 2.6rem;
+  }
+
+  .desc {
+    font-size: 1.25rem;
+  }
+
+  .footer {
+    padding-top: 1.25rem;
+  }
+}
+
+@media @mediaMobile {
+  .cont {
+    gap: 1.25rem;
+    align-items: center;
+    padding: 1.25rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .opt {
+    border-radius: 2.5rem;
+    gap: 0.6rem;
+    padding: 0.6rem;
+
+    .label {
+      font-size: 1.4rem;
+    }
+  }
 }

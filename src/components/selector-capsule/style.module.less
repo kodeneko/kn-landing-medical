@@ -1,0 +1,34 @@
+@import "global.less";
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.9rem;
+}
+
+.opt {
+  border-radius: 2.5rem;
+  background-color: @color-light;
+  display: flex;
+  gap: 1.25rem;
+  padding: 0.6rem 1.25rem;
+  padding-right: 2.5rem;
+  box-shadow: 0 0 0.7rem 0.1rem @color-blue-trans;
+  align-items: center;
+
+  .label {
+    font-size: 1.75rem;
+  }
+}
+
+@media @mediaMobile {
+  .opt {
+    border-radius: 2.5rem;
+    gap: 0.6rem;
+    padding: 0.6rem;
+
+    .label {
+      font-size: 1.4rem;
+    }
+  }
+}

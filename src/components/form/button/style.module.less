@@ -1,0 +1,47 @@
+@import "global.less";
+
+.btn {
+  border: none;
+  border-radius: 0.6rem;
+  font-weight: bold;
+  transition: all 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    background-color: @color-blue-dark;
+  }
+}
+
+.btn.def {
+  background-color: @color-blue;
+  color: @color-light;
+}
+
+.btn.sec {
+  background-color: @color-dark;
+  color: @color-light;
+}
+
+.btn.content {
+  width: fit-content;
+}
+
+.btn.wide {
+  width: 100%;
+  text-align: center;
+}
+
+.btn.md {
+  font-size: 1.25rem;
+  padding: 0.4rem 1rem;
+}
+
+.btn.lg {
+  font-size: 1.5rem;
+  padding: 0.26rem 1.25rem;
+}
+
+.btn.xl {
+  font-size: 2rem;
+  padding: 0.26rem 1.25rem;
+}

@@ -18,7 +18,7 @@ class I18nNext implements I18n {
     return this._instance;
   }
 
-  init () {
+  init() {
     i18next.
       use(initReactI18next).
       init({
@@ -32,9 +32,8 @@ class I18nNext implements I18n {
       });
   }
 
-  public t(key: string, opts?: { [key: string]: string }): string {
-    const { t } = useTranslation();
-    return t(key, opts);
+  public t(): (key: string, opts?: { [key: string]: string; }) => string {
+    return useTranslation().t;
   }
 
   public changeLang(lang: string): void {
