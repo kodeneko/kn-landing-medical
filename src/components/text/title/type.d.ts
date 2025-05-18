@@ -1,6 +1,4 @@
-type TitleProps = {
-  title: string;
-  subTitle?: string;
-};
+type TitleProps = { subTitle?: string
+  title: string };
 
 export default TitleProps;

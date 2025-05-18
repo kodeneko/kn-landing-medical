@@ -1,16 +1,16 @@
-type MenuOption = {
-  id: string;
-  path?: string;
-  icon?: string;
-};
+type Info = InfoOpt[];
 
 interface InfoOpt extends MenuOption { btn: MenuOption }
 
-interface ServiceOpt extends MenuOption { pic: string }
-
 type Menu = MenuOption[];
 
-type Info = InfoOpt[];
+type MenuOption = {
+  icon?: string
+  id: string
+  path?: string
+};
+
+interface ServiceOpt extends MenuOption { pic: string }
 
 type Services = ServiceOpt[];
 

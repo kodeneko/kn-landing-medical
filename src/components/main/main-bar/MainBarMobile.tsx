@@ -10,26 +10,29 @@ import styles from './style.module.less';
 
 const MainBarMobile = () => {
   const t = getT();
-  const [ swMenu, setSwMenu ] = useState(false);
+  const [swMenu, setSwMenu] = useState(false);
   return (
     <div className={styles.wrap}>
-      <div className={styles.menu} style={{
-        display: swMenu
+      <div
+        className={styles.menu}
+        style={{ display: swMenu
           ? 'block'
-          : 'none'
-      }}>
+          : 'none' }}
+      >
         <ul className={styles.sections}>
           <li className={styles.close}>
             <div onClick={() => setSwMenu(false)}>
               <BadgeIcon
-                icon={'fa-solid fa-circle-xmark'}
+                icon="fa-solid fa-circle-xmark"
                 size={SizeType.MD}
               />
             </div>
           </li>
-          {mainMenu.map((opt) => <li key={opt.id}>
-            <a href={`#${opt.id}`}>{t(`labels.${opt.id}`)}</a>
-          </li>)}
+          {mainMenu.map(opt => (
+            <li key={opt.id}>
+              <a href={`#${opt.id}`}>{t(`labels.${opt.id}`)}</a>
+            </li>
+          ))}
         </ul>
       </div>
       <div className={styles.bar}>
@@ -38,7 +41,7 @@ const MainBarMobile = () => {
         </div>
         <div className={styles.right}>
           <button onClick={() => setSwMenu(!swMenu)}>
-            <BadgeIcon icon={'fa-solid fa-bars'} shape={FormType.SQUARE} />
+            <BadgeIcon icon="fa-solid fa-bars" shape={FormType.SQUARE} />
           </button>
         </div>
       </div>

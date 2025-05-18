@@ -1,6 +1,6 @@
 enum EnumLang {
-  ES = 'es',
-  EN = 'en'
+  EN = 'en',
+  ES = 'es'
 }
 
 export default EnumLang;

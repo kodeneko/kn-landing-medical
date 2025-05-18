@@ -9,39 +9,44 @@ import styles from './style.module.less';
 
 const SectionPricing = () => {
   const t = getT();
-  const [ pricing, setPricing ] = useState<Price>(priceList[1]);
+  const [pricing, setPricing] = useState<Price>(priceList[1]);
   return (
     <div className={styles.cont}>
       <div className={styles.header}>
         <Title
-          title={t('pricingSec.title')}
           subTitle={t('pricingSec.sub')}
+          title={t('pricingSec.title')}
         />
       </div>
       <div className={styles.body}>
         <ul className={styles.gallery}>
-          {priceList.map((p) => <li
-            key={p.id}
-            className={styles.ele}
-            onClick={() => setPricing(p)}
-            onMouseOver={() => setPricing(p)}
-          >
-            <CardPricing
-              grad={pricing.id === p.id}
-              icon={p.icon}
-              title={t(`pricing.${p.id}.title`)}
-              price={p.price}
-              symbol={t('symbol')}
-              period={t(`period.${p.period}`)}
-              specs={p.spec.map((s) => <span
-                className={s.included
-                  ? styles.not
-                  : styles.line}
-                key={s.id}>
-                {t(`specs.${s.id}`)}
-              </span>)}
-            />
-          </li>)}
+          {priceList.map(p => (
+            <li
+              className={styles.ele}
+              key={p.id}
+              onClick={() => setPricing(p)}
+              onMouseOver={() => setPricing(p)}
+            >
+              <CardPricing
+                grad={pricing.id === p.id}
+                icon={p.icon}
+                period={t(`period.${p.period}`)}
+                price={p.price}
+                specs={p.spec.map(s => (
+                  <span
+                    className={s.included
+                      ? styles.not
+                      : styles.line}
+                    key={s.id}
+                  >
+                    {t(`specs.${s.id}`)}
+                  </span>
+                ))}
+                symbol={t('symbol')}
+                title={t(`pricing.${p.id}.title`)}
+              />
+            </li>
+          ))}
         </ul>
       </div>
     </div>

@@ -9,7 +9,7 @@ import { useState } from 'react';
 
 import styles from './style.module.less';
 
-const InfoService = ({ title, desc, onClick }) => {
+const InfoService = ({ desc, onClick, title }) => {
   const t = getT();
   return (
     <div className={styles.infoService}>
@@ -24,37 +24,41 @@ const InfoService = ({ title, desc, onClick }) => {
 
 const SectionServices = () => {
   const t = getT();
-  const [ opSel, setOpSel ] = useState<ServiceOpt>(servMenu[0]);
+  const [opSel, setOpSel] = useState<ServiceOpt>(servMenu[0]);
   const isTablet = useMediaTablet();
   const isWeb = useMediaWeb();
   const handleClick = (id: string) => {
-    setOpSel(servMenu.find((op) => op.id === id) as ServiceOpt);
+    setOpSel(servMenu.find(op => op.id === id) as ServiceOpt);
   };
   return (
     <div className={styles.cont}>
       <Title
-        title={t('servicesSec.title')}
         subTitle={t('servicesSec.sub')}
+        title={t('servicesSec.title')}
       />
       <div className={styles.body}>
         <div className={styles.menu}>
           <SelectorCapsule
-            options={servMenu}
             onClick={handleClick}
+            options={servMenu}
           />
         </div>
-        {isWeb &&
-          <div className={styles.picWrap}>
-            <img src={`/services/${opSel.pic}`} />
-          </div>}
-        {(isWeb || isTablet) &&
-          <div className={styles.info}>
-            <InfoService
-              title={t(`services.${opSel.id}.title`)}
-              desc={t(`services.${opSel.id}.desc`)}
-              onClick={() => console.log(opSel.id)}
-            />
-          </div>}
+        {isWeb
+          && (
+            <div className={styles.picWrap}>
+              <img src={`/services/${opSel.pic}`} />
+            </div>
+          )}
+        {(isWeb || isTablet)
+          && (
+            <div className={styles.info}>
+              <InfoService
+                desc={t(`services.${opSel.id}.desc`)}
+                onClick={() => console.log(opSel.id)}
+                title={t(`services.${opSel.id}.title`)}
+              />
+            </div>
+          )}
       </div>
     </div>
   );

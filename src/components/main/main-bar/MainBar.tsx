@@ -12,9 +12,11 @@ const MainBar = () => {
       <div className={styles.left}>
         <Logo />
         <ul className={styles.menu}>
-          {mainMenu.map((opt) => <li key={opt.id}>
-            <a href={`#${opt.id}`}>{t(`labels.${opt.id}`)}</a>
-          </li>)}
+          {mainMenu.map(opt => (
+            <li key={opt.id}>
+              <a href={`#${opt.id}`}>{t(`labels.${opt.id}`)}</a>
+            </li>
+          ))}
         </ul>
       </div>
       <div className={styles.right}>

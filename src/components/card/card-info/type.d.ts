@@ -1,11 +1,10 @@
-import { BtnType, FormType, Menu, SizeType } from '@models/app';
 import React from 'react';
 
 type CardInfoProps = {
-  title: string;
-  icon: string;
-  gradient?: boolean;
-  actions?: React.JSX.Element;
+  actions?: React.JSX.Element
+  gradient?: boolean
+  icon: string
+  title: string
 };
 
 export default CardInfoProps;

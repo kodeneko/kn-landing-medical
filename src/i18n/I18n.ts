@@ -1,7 +1,7 @@
 interface I18n {
-  init: () => void;
-  t: () => (key: string, opts?: { [key: string]: string }) => string;
-  changeLang: (lang: string) => void;
+  changeLang: (lang: string) => void
+  init: () => void
+  t: () => (key: string, opts?: { [key: string]: string }) => string
 }
 
 export default I18n;

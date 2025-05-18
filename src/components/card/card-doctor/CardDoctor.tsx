@@ -1,8 +1,7 @@
-
 import styles from './style.module.less';
 import CardDoctorProps from './type';
 
-const CardDoctor = ({ pic, name, surname }: CardDoctorProps) => {
+const CardDoctor = ({ name, pic, surname }: CardDoctorProps) => {
   return (
     <div className={styles.card}>
       <div className={styles.picWrap}>

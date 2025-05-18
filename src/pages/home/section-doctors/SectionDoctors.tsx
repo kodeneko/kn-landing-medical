@@ -12,18 +12,20 @@ const SectionContact = () => {
   return (
     <div className={styles.cont}>
       <Title
-        title={t('doctorsSec.title')}
         subTitle={t('doctorsSec.sub')}
+        title={t('doctorsSec.title')}
       />
       <div className={styles.body}>
         <ul className={styles.gallery}>
-          {doctors.map((d) => <li key={d.specialist}>
-            <CardDoctor
-              pic={`/doctors/${d.pic}`}
-              name={d.name}
-              surname={d.specialist}
-            />
-          </li>)}
+          {doctors.map(d => (
+            <li key={d.specialist}>
+              <CardDoctor
+                name={d.name}
+                pic={`/doctors/${d.pic}`}
+                surname={d.specialist}
+              />
+            </li>
+          ))}
         </ul>
       </div>
       <div className={styles.footer}>

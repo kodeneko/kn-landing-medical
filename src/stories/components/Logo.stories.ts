@@ -1,13 +1,14 @@
-import { Logo } from '@components/index';
 import type { Meta, StoryObj } from '@storybook/react';
+
+import { Logo } from '@components/index';
 import { fn } from '@storybook/test';
 
 const meta = {
-  argTypes: { backgroundColor: { control: 'color' } },
   args: { onClick: fn() },
+  argTypes: { backgroundColor: { control: 'color' } },
   component: Logo,
   parameters: { layout: 'centered' },
-  tags: [ 'autodocs' ],
+  tags: ['autodocs'],
   title: 'Common/Logo'
 } satisfies Meta<typeof Logo>;
 

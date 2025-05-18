@@ -1,15 +1,14 @@
 enum EnumSpecialist {
-  PODIATRIST = 'podiatrist',
   FAMILIY_DOCTOR = 'familyDoctor',
+  PODIATRIST = 'podiatrist',
   UROLOGIST = 'urologist'
 }
 
 interface Doctor {
-  name: string;
-  specialist: EnumSpecialist;
-  pic: string;
+  name: string
+  pic: string
+  specialist: EnumSpecialist
 }
 
 export { EnumSpecialist };
 export type { Doctor };
-

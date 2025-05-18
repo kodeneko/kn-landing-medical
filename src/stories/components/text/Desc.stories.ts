@@ -1,15 +1,14 @@
-import { Desc } from '@components/index';
 import type { Meta, StoryObj } from '@storybook/react';
 
+import { Desc } from '@components/index';
+
 const meta = {
+  args: { content: 'Lorem ipsum lorem amet dolor',
+    title: 'Lorem' },
   argTypes: { },
-  args: {
-    content: 'Lorem ipsum lorem amet dolor',
-    title: 'Lorem'
-  },
   component: Desc,
   parameters: { layout: 'centered' },
-  tags: [ 'autodocs' ],
+  tags: ['autodocs'],
   title: 'Text/Desc'
 } satisfies Meta<typeof Desc>;
 

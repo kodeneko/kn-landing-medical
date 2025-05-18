@@ -11,12 +11,12 @@ import CasdPricingProps from './type';
 const CasdPricing = ({
   grad = false,
   icon,
-  title,
-  price,
-  symbol,
+  onClick,
   period,
+  price,
   specs,
-  onClick
+  symbol,
+  title
 }: CasdPricingProps) => {
   const t = getT();
   const stylePricing = clsx(styles.pricing, styles[grad
@@ -26,8 +26,11 @@ const CasdPricing = ({
     <div className={stylePricing}>
       <header className={styles.header}>
         <div className={styles.icon}>
-          <BadgeIcon icon={icon} shape={FormType.CIRCLE}
-            invert={grad} />
+          <BadgeIcon
+            icon={icon}
+            invert={grad}
+            shape={FormType.CIRCLE}
+          />
         </div>
         <div className={styles.title}>{ title }</div>
       </header>
@@ -43,12 +46,16 @@ const CasdPricing = ({
           </div>
         </div>
         <div className={styles.specs}>
-          <List list={specs} inverse={grad} />
+          <List inverse={grad} list={specs} />
         </div>
       </div>
       <footer className={styles.footer}>
-        <Button onClick={onClick} fullWide={true}
-          secondary={grad}>{ t('labels.hire')}
+        <Button
+          fullWide={true}
+          onClick={onClick}
+          secondary={grad}
+        >
+          { t('labels.hire')}
         </Button>
       </footer>
     </div>

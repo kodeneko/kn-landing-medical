@@ -7,7 +7,9 @@ import ButtonProps from './type';
 
 type ButtonPropsWithChildren = React.PropsWithChildren<ButtonProps>;
 
-const Button = ({ children, type = BtnType.BTN, size = SizeType.MD, secondary = false, fullWide = false, href, onClick }: ButtonPropsWithChildren) => {
+const Button = ({
+  children, fullWide = false, href, onClick, secondary = false, size = SizeType.MD, type = BtnType.BTN
+}: ButtonPropsWithChildren) => {
   const stylesBtn = clsx(styles.btn, styles[size], styles[fullWide
     ? 'wide'
     : 'content'], styles[secondary

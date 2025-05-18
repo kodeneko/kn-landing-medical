@@ -33,7 +33,7 @@ export default defineConfig([
     '@stylistic/jsx-indent': ['error', 2],
     '@stylistic/multiline-ternary': ['error', 'always-multiline'],
     '@stylistic/newline-per-chained-call': ['error', { ignoreChainWithDepth: 2 }],
-    '@stylistic/object-curly-newline': ['error', { minProperties: 4 }],
+    // '@stylistic/object-curly-newline': ['error', { minProperties: 4 }],
     '@stylistic/operator-linebreak': ['error', 'before'],
     '@stylistic/semi': ['error', 'always'],
     'import/no-duplicates': 'error',

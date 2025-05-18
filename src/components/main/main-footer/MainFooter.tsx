@@ -14,8 +14,8 @@ const MainFooter = () => {
         {t('credits')}
       </div>
       <ul className={styles.right}>
-        <li><a href='#'>{t('terms')}</a></li>
-        <li><a href='#'>{t('privacy')}</a></li>
+        <li><a href="#">{t('terms')}</a></li>
+        <li><a href="#">{t('privacy')}</a></li>
       </ul>
     </div>
   );

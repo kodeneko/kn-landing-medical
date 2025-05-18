@@ -7,20 +7,20 @@ import styles from './style.module.less';
 
 const SectionContact = () => {
   const t = getT();
-  const [ mail, setMail ] = useState<string>('');
+  const [mail, setMail] = useState<string>('');
   return (
     <div className={styles.cont}>
       <div className={styles.header}>
         <Title
-          title={t('contactSec.title')}
           subTitle={t('contactSec.sub')}
+          title={t('contactSec.title')}
         />
       </div>
       <div className={styles.body}>
         <div className={styles.wrap}>
           <ContactForm
+            onChange={val => setMail(val)}
             val={mail}
-            onChange={(val) => setMail(val)}
           />
         </div>
       </div>

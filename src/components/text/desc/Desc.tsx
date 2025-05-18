@@ -1,7 +1,7 @@
 import styles from './style.module.less';
 import DescProps from './type';
 
-const Desc = ({ title, content }: DescProps) => {
+const Desc = ({ content, title }: DescProps) => {
   return (
     <div className={styles.cont}>
       <div className={styles.title}>{title}</div>

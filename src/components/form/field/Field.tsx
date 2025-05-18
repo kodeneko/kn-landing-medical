@@ -2,26 +2,26 @@ import styles from './style.module.less';
 import FieldProps from './type';
 
 const Field = ({
+  hint,
   id,
   label,
-  value,
-  hint,
-  placeH,
+  onBlur,
   onChange,
-  onBlur
+  placeH,
+  value
 }: FieldProps) => {
   return (
     <div className={styles.cont}>
       <div className={styles.label}>{ label }</div>
       <input
+        className={styles.input}
         id={id}
         name={id}
-        className={styles.input}
+        onBlur={onBlur}
+        onChange={onChange}
+        placeholder={placeH}
         type="text"
         value={value}
-        onChange={onChange}
-        onBlur={onBlur}
-        placeholder={placeH}
       />
       <div className={styles.hint}>{ hint }</div>
     </div>

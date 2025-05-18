@@ -1,60 +1,34 @@
 import { EnumPeriod, Price, Spec } from '@models/Price';
 
 const specsCopay: Spec[] = [
-  {
-    id: 'sp01',
-    included: true
-  },
-  {
-    id: 'sp02',
-    included: true
-  },
-  {
-    id: 'sp03',
-    included: true
-  },
-  {
-    id: 'sp04',
-    included: false
-  },
-  {
-    id: 'sp05',
-    included: false
-  }
+  { id: 'sp01',
+    included: true },
+  { id: 'sp02',
+    included: true },
+  { id: 'sp03',
+    included: true },
+  { id: 'sp04',
+    included: false },
+  { id: 'sp05',
+    included: false }
 ];
 
 const specsFull: Spec[] = [
-  {
-    id: 'sp01',
-    included: true
-  },
-  {
-    id: 'sp02',
-    included: true
-  },
-  {
-    id: 'sp03',
-    included: true
-  },
-  {
-    id: 'sp04',
-    included: true
-  },
-  {
-    id: 'sp05',
-    included: true
-  }
+  { id: 'sp01',
+    included: true },
+  { id: 'sp02',
+    included: true },
+  { id: 'sp03',
+    included: true },
+  { id: 'sp04',
+    included: true },
+  { id: 'sp05',
+    included: true }
 ];
 
-const specsSupdent: Spec[] = [
-  {
-    id: 'dent01',
-    included: true
-  }, {
-    id: 'dent02',
-    included: true
-  }
-];
+const specsSupdent: Spec[] = [{ id: 'dent01',
+  included: true }, { id: 'dent02',
+  included: true }];
 
 const priceCopay: Price = {
   icon: 'fa-solid fa-credit-card',
@@ -80,11 +54,7 @@ const priceSupdent: Price = {
   spec: specsSupdent
 };
 
-const priceList = [
-  priceCopay,
-  priceFull,
-  priceSupdent
-];
+const priceList = [priceCopay, priceFull, priceSupdent];
 
 export {
   priceCopay,

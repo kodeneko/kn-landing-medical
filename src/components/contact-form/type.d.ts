@@ -1,8 +1,4 @@
-import { BtnType, FormType, Menu, SizeType } from '@models/app';
-
-type ContactFormProps = {
-  val: string;
-  onChange: (mail: string) => void;
-};
+type ContactFormProps = { onChange: (mail: string) => void
+  val: string };
 
 export default ContactFormProps;

@@ -1,8 +1,4 @@
-import { BtnType, FormType, SizeType } from '@models/app';
-
-type DescProps = {
-  title: string;
-  content: string;
-};
+type DescProps = { content: string
+  title: string };
 
 export default DescProps;

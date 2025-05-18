@@ -1,4 +1,5 @@
 import '@assets/styles/global.less';
+
 import './fontawesome.ts';
 
 import { getI18n } from '@i18n/index.ts';
@@ -12,8 +13,10 @@ import router from './globals/routing.tsx';
 
 getI18n().init();
 
-ReactDOM.createRoot(document.getElementById('root') as Container).render(<React.StrictMode>
-  <Provider store={reduxStore}>
-    <RouterProvider router={router} />
-  </Provider>
-</React.StrictMode>);
+ReactDOM.createRoot(document.getElementById('root') as Container).render(
+  <React.StrictMode>
+    <Provider store={reduxStore}>
+      <RouterProvider router={router} />
+    </Provider>
+  </React.StrictMode>
+);

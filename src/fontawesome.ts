@@ -1,5 +1,7 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faBars, faCalendarDay, faCapsules, faCircleXmark, faCreditCard, faCrutch, faFlask, faGlasses, faHospital, faStethoscope, faTooth, faUserDoctor } from '@fortawesome/free-solid-svg-icons';
+import {
+  faBars, faCalendarDay, faCapsules, faCircleXmark, faCreditCard, faCrutch, faFlask, faGlasses, faHospital, faStethoscope, faTooth, faUserDoctor
+} from '@fortawesome/free-solid-svg-icons';
 
 library.add(
   faStethoscope,

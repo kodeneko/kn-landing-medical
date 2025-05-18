@@ -1,11 +1,11 @@
 type FieldProps = {
-  id: string;
-  label: string;
-  value: string;
-  hint?: string;
-  placeH?: string;
-  onChange: (e) => void;
-  onBlur: (e) => void;
+  hint?: string
+  id: string
+  label: string
+  onBlur: (e) => void
+  onChange: (e) => void
+  placeH?: string
+  value: string
 };
 
 export default FieldProps;

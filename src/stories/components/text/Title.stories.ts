@@ -1,12 +1,13 @@
-import { Title } from '@components/index';
 import type { Meta, StoryObj } from '@storybook/react';
 
+import { Title } from '@components/index';
+
 const meta = {
-  argTypes: { },
   args: { title: 'Lorem' },
+  argTypes: { },
   component: Title,
   parameters: { layout: 'centered' },
-  tags: [ 'autodocs' ],
+  tags: ['autodocs'],
   title: 'Text/Title'
 } satisfies Meta<typeof Title>;
 

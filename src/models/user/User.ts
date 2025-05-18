@@ -2,8 +2,8 @@ import EnumLang from './EnumLang';
 import EnumTheme from './EnumTheme';
 
 interface User {
-  theme: EnumTheme;
-  lang: EnumLang;
+  lang: EnumLang
+  theme: EnumTheme
 }
 
 export default User;

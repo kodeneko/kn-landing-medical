@@ -1,8 +1,8 @@
-import { CardPricing } from '@components/index';
 import type { Meta, StoryObj } from '@storybook/react';
 
+import { CardPricing } from '@components/index';
+
 const meta = {
-  argTypes: { },
   args: {
     icon: 'fa-solid fa-credit-card',
     period: 'mes',
@@ -17,9 +17,10 @@ const meta = {
     symbol: '€',
     title: 'Copago'
   },
+  argTypes: { },
   component: CardPricing,
   parameters: { layout: 'fullscreen' },
-  tags: [ 'autodocs' ],
+  tags: ['autodocs'],
   title: 'Card/CardPricing'
 } satisfies Meta<typeof CardPricing>;
 

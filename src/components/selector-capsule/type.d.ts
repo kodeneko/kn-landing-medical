@@ -1,8 +1,4 @@
-import { BtnType, FormType, Menu, SizeType } from '@models/app';
-
-type SelectorCapsuleProps = {
-  options: Menu;
-  onClick: (idOpt: string) => void;
-};
+type SelectorCapsuleProps = { onClick: (idOpt: string) => void
+  options: Menu };
 
 export default SelectorCapsuleProps;

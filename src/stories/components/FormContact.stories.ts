@@ -1,12 +1,13 @@
-import { ContactForm } from '@components/index';
 import type { Meta, StoryObj } from '@storybook/react';
 
+import { ContactForm } from '@components/index';
+
 const meta = {
-  argTypes: { },
   args: { },
+  argTypes: { },
   component: ContactForm,
   parameters: { layout: 'fullscreen' },
-  tags: [ 'autodocs' ],
+  tags: ['autodocs'],
   title: 'Common/ContactForm'
 } satisfies Meta<typeof ContactForm>;
 

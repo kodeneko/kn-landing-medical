@@ -12,37 +12,37 @@ const CardInfoTime = () => {
   const t = getT();
   return (
     <CardInfo
-      title={t(`info.${OpeningInfoOpt.id}.title`)}
-      icon={OpeningInfoOpt.icon as string}
       gradient={true}
+      icon={OpeningInfoOpt.icon as string}
+      title={t(`info.${OpeningInfoOpt.id}.title`)}
     >
       <div className={styles.infoBody}>
         <Desc
-          title={t('info.opening.titleTime')}
           content={t('info.opening.descTime')}
+          title={t('info.opening.titleTime')}
         />
         <Desc
-          title={t('info.opening.titleAddress')}
           content={t('info.opening.descAddress')}
+          title={t('info.opening.titleAddress')}
         />
       </div>
     </CardInfo>
   );
 };
 
-const CardInfoEle = ({ id, icon, path }: MenuOption) => {
+const CardInfoEle = ({ icon, id, path }: MenuOption) => {
   const t = getT();
   return (
     <CardInfo
-      title={t(`info.${id}.title`)}
-      icon={icon as string}
-      actions={
+      actions={(
         <div className={styles.actionsCont}>
           <Button onClick={() => console.log(path)}>
             {t(`info.${id}.btn`)}
           </Button>
         </div>
-      }
+      )}
+      icon={icon as string}
+      title={t(`info.${id}.title`)}
     >
       {t(`info.${id}.desc`)}
     </CardInfo>
@@ -52,13 +52,15 @@ const CardInfoEle = ({ id, icon, path }: MenuOption) => {
 const SectionInfoMobile = () => {
   return (
     <ul className={styles.galMobile}>
-      {InfoMenu.map((s) => <li key={s.id}>
-        <CardInfoEle
-          id={s.id}
-          icon={s.icon}
-          path={s.path}
-        />
-      </li>)}
+      {InfoMenu.map(s => (
+        <li key={s.id}>
+          <CardInfoEle
+            icon={s.icon}
+            id={s.id}
+            path={s.path}
+          />
+        </li>
+      ))}
       <li>
         <CardInfoTime />
       </li>
@@ -72,13 +74,15 @@ const SectionInfoWeb = () => {
       <li>
         <CardInfoTime />
       </li>
-      {InfoMenu.map((s) => <li key={s.id}>
-        <CardInfoEle
-          id={s.id}
-          icon={s.icon}
-          path={s.path}
-        />
-      </li>)}
+      {InfoMenu.map(s => (
+        <li key={s.id}>
+          <CardInfoEle
+            icon={s.icon}
+            id={s.id}
+            path={s.path}
+          />
+        </li>
+      ))}
     </ul>
   );
 };
