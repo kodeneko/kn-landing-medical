@@ -1,5 +1,6 @@
 import { ContactForm } from '@components/contact-form';
 import { ContactFormModel } from '@components/contact-form/models';
+import sendNoti from '@components/notification/useNoti';
 import { Title } from '@components/text';
 import { getT } from '@i18n/index';
 
@@ -10,6 +11,7 @@ const SectionContact = () => {
 
   const handleForm = (contact: ContactFormModel) => {
     console.log(contact);
+    sendNoti({ msg: '😃 Message sended' });
   };
 
   return (
