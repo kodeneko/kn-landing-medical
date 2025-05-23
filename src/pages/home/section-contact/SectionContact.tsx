@@ -1,5 +1,5 @@
 import { ContactForm } from '@components/contact-form';
-import { ContactFormModel } from '@components/contact-form/type';
+import { ContactFormModel } from '@components/contact-form/models';
 import { Title } from '@components/text';
 import { getT } from '@i18n/index';
 
