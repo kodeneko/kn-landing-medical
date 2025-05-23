@@ -47,6 +47,7 @@ export default defineConfig([
         ObjectExpression: { consistent: true, minProperties: 4, multiline: true },
         ObjectPattern: { consistent: true, minProperties: 4, multiline: true }
       }],
+      'perfectionist/sort-modules': 'off',
       'react-hooks/rules-of-hooks': 'off',
       'react/react-in-jsx-scope': 'off'
     }
