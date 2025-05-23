@@ -1,6 +1,6 @@
 import React from 'react';
 
-type CasdPricingProps = {
+type CardPricingProps = {
   grad?: boolean
   icon: string
   onClick?: () => void
@@ -11,4 +11,4 @@ type CasdPricingProps = {
   title: string
 };
 
-export default CasdPricingProps;
+export default CardPricingProps;
