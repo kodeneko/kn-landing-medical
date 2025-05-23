@@ -104,11 +104,15 @@ export default {
     sub: 'Our Medical Services',
     title: 'Services'
   },
+  specialists: {
+    familyDoctor: 'Family Doctor',
+    podiatrist: 'Podiatrist',
+    urologist: 'Urologist'
+  },
   symbol: '$',
   terms: 'Terms & Conditions',
   welcomeSec: {
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus.',
     title: 'Healthcare Solutions'
   }
-
 };
