@@ -1,16 +1,24 @@
 export default {
-  contactSec: { sub: 'We Contact You!',
-    title: 'Contact' },
+  contactSec: {
+    sub: 'We Contact You!',
+    title: 'Contact'
+  },
   credits: '© Web created by Kodeneko',
-  doctorsSec: { sub: 'Our Doctors',
-    title: 'Team' },
+  doctorsSec: {
+    sub: 'Our Doctors',
+    title: 'Team'
+  },
   info: {
-    appointment: { btn: 'Make',
+    appointment: {
+      btn: 'Make',
       desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.',
-      title: 'Appointment' },
-    doctors: { btn: 'Find',
+      title: 'Appointment'
+    },
+    doctors: {
+      btn: 'Find',
       desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.',
-      title: 'Find Doctors' },
+      title: 'Find Doctors'
+    },
     opening: {
       descAddress: 'C/Lorem Ipsum 32 - Lorem Landia (Atiamet)',
       descTime: '9:00 - 17:00',
@@ -18,9 +26,11 @@ export default {
       titleAddress: 'Adress',
       titleTime: 'Monday - Friday'
     },
-    pricing: { btn: 'Consult',
+    pricing: {
+      btn: 'Consult',
       desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.',
-      title: 'Pricing' }
+      title: 'Pricing'
+    }
   },
   labels: {
     about: 'About',
@@ -44,8 +54,10 @@ export default {
     yourMail: 'Your mail'
   },
   msg: { errorMail: 'The mail format is incorrect' },
-  period: { month: 'Month',
-    year: 'Year' },
+  period: {
+    month: 'Month',
+    year: 'Year'
+  },
   placeH: { mail: '...insert your mail' },
   pricing: {
     copay: { title: 'Copay' },
@@ -59,26 +71,42 @@ export default {
       sp05: 'lorem ipsum lorem'
     }
   },
-  pricingSec: { sub: 'Our Prices',
-    title: 'Hire' },
+  pricingSec: {
+    sub: 'Our Prices',
+    title: 'Hire'
+  },
   privacy: 'Privacy Policy',
   services: {
-    dental: { desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit dictumst in ante elementum mauris erat turpiLorem ipsum dolor sit amet consectetur adipiscing elit dictumst in ante elementum mauris erat turpi',
-      title: 'Dental' },
-    diag: { desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit dictumst in ante elementum mauris erat turpiLorem ipsum dolor sit amet consectetur adipiscing elit dictumst in ante elementum mauris erat turpi',
-      title: 'Diag. Test' },
-    medicine: { desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit dictumst in ante elementum mauris erat turpiLorem ipsum dolor sit amet consectetur adipiscing elit dictumst in ante elementum mauris erat turpi',
-      title: 'Medicine' },
-    ophtha: { desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit dictumst in ante elementum mauris erat turpiLorem ipsum dolor sit amet consectetur adipiscing elit dictumst in ante elementum mauris erat turpi',
-      title: 'Ophthalmology' },
-    ortho: { desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit dictumst in ante elementum mauris erat turpiLorem ipsum dolor sit amet consectetur adipiscing elit dictumst in ante elementum mauris erat turpi',
-      title: 'Orthopedic' }
+    dental: {
+      desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit dictumst in ante elementum mauris erat turpiLorem ipsum dolor sit amet consectetur adipiscing elit dictumst in ante elementum mauris erat turpi',
+      title: 'Dental'
+    },
+    diag: {
+      desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit dictumst in ante elementum mauris erat turpiLorem ipsum dolor sit amet consectetur adipiscing elit dictumst in ante elementum mauris erat turpi',
+      title: 'Diag. Test'
+    },
+    medicine: {
+      desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit dictumst in ante elementum mauris erat turpiLorem ipsum dolor sit amet consectetur adipiscing elit dictumst in ante elementum mauris erat turpi',
+      title: 'Medicine'
+    },
+    ophtha: {
+      desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit dictumst in ante elementum mauris erat turpiLorem ipsum dolor sit amet consectetur adipiscing elit dictumst in ante elementum mauris erat turpi',
+      title: 'Ophthalmology'
+    },
+    ortho: {
+      desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit dictumst in ante elementum mauris erat turpiLorem ipsum dolor sit amet consectetur adipiscing elit dictumst in ante elementum mauris erat turpi',
+      title: 'Orthopedic'
+    }
   },
-  servicesSec: { sub: 'Our Medical Services',
-    title: 'Services' },
+  servicesSec: {
+    sub: 'Our Medical Services',
+    title: 'Services'
+  },
   symbol: '€',
   terms: 'Terms & Conditions',
-  welcomeSec: { desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus.',
-    title: 'Healthcare Solutions' }
+  welcomeSec: {
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus.',
+    title: 'Healthcare Solutions'
+  }
 
 };

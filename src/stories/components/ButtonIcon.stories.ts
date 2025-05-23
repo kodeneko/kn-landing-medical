@@ -4,9 +4,11 @@ import { BadgeIcon } from '@components/index';
 import { FormType, SizeType } from '@models/app';
 
 const meta = {
-  args: { icon: 'fa-solid fa-flask',
+  args: {
+    icon: 'fa-solid fa-flask',
     shape: FormType.CIRCLE,
-    size: SizeType.MD },
+    size: SizeType.MD
+  },
   argTypes: { },
   component: BadgeIcon,
   parameters: { layout: 'centered' },

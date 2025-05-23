@@ -17,5 +17,7 @@ interface Spec {
 }
 
 export { EnumPeriod };
-export type { Price,
-  Spec };
+export type {
+  Price,
+  Spec
+};

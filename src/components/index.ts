@@ -1,7 +1,9 @@
 export { BadgeIcon } from './badge-icon';
-export { CardDoctor,
+export {
+  CardDoctor,
   CardInfo,
-  CardPricing } from './card';
+  CardPricing
+} from './card';
 export { ContactForm } from './contact-form';
 export { Button } from './form';
 export { Logo } from './logo';

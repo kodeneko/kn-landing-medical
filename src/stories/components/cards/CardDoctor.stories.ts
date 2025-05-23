@@ -4,9 +4,11 @@ import doctor from '@assets/pics/doctor-macizo.png';
 import { CardDoctor } from '@components/index';
 
 const meta = {
-  args: { name: 'Jude Law Law',
+  args: {
+    name: 'Jude Law Law',
     pic: doctor,
-    surname: 'Urólogo' },
+    surname: 'Urólogo'
+  },
   argTypes: { },
   component: CardDoctor,
   parameters: { layout: 'fullscreen' },

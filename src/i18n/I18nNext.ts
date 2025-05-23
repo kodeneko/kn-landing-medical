@@ -1,5 +1,4 @@
-/* eslint-disable import/no-named-as-default-member */
-import i18next from 'i18next';
+import { use as i18nextUse } from 'i18next';
 import { initReactI18next, useTranslation } from 'react-i18next';
 
 import I18n from './I18n';
@@ -24,14 +23,15 @@ class I18nNext implements I18n {
   }
 
   init() {
-    i18next
-      .use(initReactI18next)
+    i18nextUse(initReactI18next)
       .init({
         fallbackLng: 'en',
         interpolation: { escapeValue: false },
         lng: 'en',
-        resources: { en: { translation: en },
-          es: { translation: es } }
+        resources: {
+          en: { translation: en },
+          es: { translation: es }
+        }
       });
   }
 

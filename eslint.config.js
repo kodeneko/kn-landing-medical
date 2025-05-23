@@ -17,27 +17,38 @@ export default defineConfig([
   pluginReact.configs.flat.recommended,
   stylistic.configs.recommended,
   reactHooks.configs['recommended-latest'],
-  { files: ['**/*.{jsx,tsx}'],
+  {
+    files: ['**/*.{jsx,tsx}'],
     plugins: { pluginReact },
-    settings: { react: { version: 'detect' } } },
-  { rules: {
-    '@stylistic/array-bracket-newline': ['error', { minItems: 4 }],
-    // '@stylistic/curly-newline': ['error', { minElements: 4 }],
-    '@stylistic/array-element-newline': ['error', { minItems: 4 }],
-    '@stylistic/arrow-parens': ['error', 'as-needed'],
-    '@stylistic/comma-dangle': ['error', 'never'],
-    '@stylistic/comma-spacing': ['error', { after: true, before: false }],
-    '@stylistic/dot-location': ['error', 'property'],
-    '@stylistic/function-call-argument-newline': ['error', 'consistent'],
-    '@stylistic/indent': ['error', 2],
-    '@stylistic/jsx-indent': ['error', 2],
-    '@stylistic/multiline-ternary': ['error', 'always-multiline'],
-    '@stylistic/newline-per-chained-call': ['error', { ignoreChainWithDepth: 2 }],
-    // '@stylistic/object-curly-newline': ['error', { minProperties: 4 }],
-    '@stylistic/operator-linebreak': ['error', 'before'],
-    '@stylistic/semi': ['error', 'always'],
-    'import/no-duplicates': 'error',
-    'import/no-unresolved': 'off',
-    'react/react-in-jsx-scope': 'off'
-  } }
+    settings: { react: { version: 'detect' } }
+  },
+  {
+    rules: {
+      '@stylistic/array-bracket-newline': ['error', { minItems: 4 }],
+      // '@stylistic/curly-newline': ['error', { minElements: 4 }],
+      '@stylistic/array-element-newline': ['error', { minItems: 4 }],
+      '@stylistic/arrow-parens': ['error', 'as-needed'],
+      '@stylistic/comma-dangle': ['error', 'never'],
+      '@stylistic/comma-spacing': ['error', { after: true, before: false }],
+      '@stylistic/dot-location': ['error', 'property'],
+      '@stylistic/function-call-argument-newline': ['error', 'consistent'],
+      '@stylistic/indent': ['error', 2],
+      '@stylistic/jsx-indent': ['error', 2],
+      '@stylistic/multiline-ternary': ['error', 'always-multiline'],
+      '@stylistic/newline-per-chained-call': ['error', { ignoreChainWithDepth: 2 }],
+      '@stylistic/operator-linebreak': ['error', 'before'],
+      '@stylistic/semi': ['error', 'always'],
+      'import/no-duplicates': 'error',
+      'import/no-unresolved': 'off',
+      // '@stylistic/object-curly-newline': ['error', { minProperties: 4 }],
+      'object-curly-newline': ['error', {
+        ExportDeclaration: { consistent: true, minProperties: 4, multiline: true },
+        ImportDeclaration: { consistent: true, minProperties: 4, multiline: true },
+        ObjectExpression: { consistent: true, minProperties: 4, multiline: true },
+        ObjectPattern: { consistent: true, minProperties: 4, multiline: true }
+      }],
+      'react-hooks/rules-of-hooks': 'off',
+      'react/react-in-jsx-scope': 'off'
+    }
+  }
 ]);

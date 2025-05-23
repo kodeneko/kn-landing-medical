@@ -15,9 +15,11 @@ const MainBarMobile = () => {
     <div className={styles.wrap}>
       <div
         className={styles.menu}
-        style={{ display: swMenu
-          ? 'block'
-          : 'none' }}
+        style={{
+          display: swMenu
+            ? 'block'
+            : 'none'
+        }}
       >
         <ul className={styles.sections}>
           <li className={styles.close}>

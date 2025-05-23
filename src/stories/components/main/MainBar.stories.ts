@@ -15,5 +15,9 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Def: Story = { args: { label: 'Button',
-  size: 'large' } };
+export const Def: Story = {
+  args: {
+    label: 'Button',
+    size: 'large'
+  }
+};

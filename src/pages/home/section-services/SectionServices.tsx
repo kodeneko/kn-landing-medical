@@ -5,11 +5,12 @@ import { servMenu } from '@globals/services';
 import { useMediaTablet, useMediaWeb } from '@hooks/useMedia';
 import { getT } from '@i18n/index';
 import { ServiceOpt } from '@models/app';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 import styles from './style.module.less';
+import { InfoServiceProps } from './types';
 
-const InfoService = ({ desc, onClick, title }) => {
+const InfoService: React.FC<InfoServiceProps> = ({ desc, onClick, title }) => {
   const t = getT();
   return (
     <div className={styles.infoService}>

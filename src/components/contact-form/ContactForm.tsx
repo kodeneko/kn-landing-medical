@@ -9,16 +9,20 @@ import { toFormikValidationSchema } from 'zod-formik-adapter';
 import styles from './style.module.less';
 import ContactFormProps from './type';
 
-const ContactForm = ({ onChange,
-  val }: ContactFormProps) => {
+const ContactForm = ({
+  onChange,
+  val
+}: ContactFormProps) => {
   const t = getT();
   const isMobile = useMediaMobile();
   const schema = z.object({ mail: z.string().email(t('msg.errorMail')) });
-  const formik = useFormik({ initialValues: { mail: val },
+  const formik = useFormik({
+    initialValues: { mail: val },
     onSubmit: vals => {
       onChange(vals.mail);
     },
-    validationSchema: toFormikValidationSchema(schema) });
+    validationSchema: toFormikValidationSchema(schema)
+  });
   return (
     <div className={styles.cont}>
       <form>

@@ -11,9 +11,11 @@ export {
   PricingInfoOpt
 } from './info';
 export { mainTitle } from './literals';
-export { mediaMobile,
+export {
+  mediaMobile,
   mediaTablet,
-  mediaWeb } from './media';
+  mediaWeb
+} from './media';
 export {
   mainMenu,
   menuOptAbout,
