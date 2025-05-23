@@ -7,7 +7,7 @@ import clsx from 'clsx';
 import styles from './style.module.less';
 import BadgeIconProps from './type';
 
-export const BadgeIcon = ({
+const BadgeIcon = ({
   icon, invert = false, shape = FormType.CIRCLE, size = SizeType.MD
 }: BadgeIconProps) => {
   const styleWrap = clsx(
@@ -26,3 +26,5 @@ export const BadgeIcon = ({
     </div>
   );
 };
+
+export default BadgeIcon;

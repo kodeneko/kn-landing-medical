@@ -27,7 +27,7 @@ const ContactForm = ({
     <div className={styles.cont}>
       <form>
         <Field
-          hint={formik.touched.mail && formik.errors.mail}
+          hint={formik.touched.mail ? formik.errors.mail : ''}
           id="mail"
           label={t('labels.mail')}
           onBlur={formik.handleBlur}
