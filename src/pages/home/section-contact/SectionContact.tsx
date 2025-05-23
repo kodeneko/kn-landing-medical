@@ -1,13 +1,17 @@
 import { ContactForm } from '@components/contact-form';
+import { ContactFormModel } from '@components/contact-form/type';
 import { Title } from '@components/text';
 import { getT } from '@i18n/index';
-import { useState } from 'react';
 
 import styles from './style.module.less';
 
 const SectionContact = () => {
   const t = getT();
-  const [mail, setMail] = useState<string>('');
+
+  const handleForm = (contact: ContactFormModel) => {
+    console.log(contact);
+  };
+
   return (
     <div className={styles.cont}>
       <div className={styles.header}>
@@ -19,8 +23,7 @@ const SectionContact = () => {
       <div className={styles.body}>
         <div className={styles.wrap}>
           <ContactForm
-            onChange={val => setMail(val)}
-            val={mail}
+            onChange={handleForm}
           />
         </div>
       </div>
