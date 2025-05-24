@@ -11,11 +11,11 @@ const MainFooter = () => {
         <Logo inverse />
       </div>
       <div className={styles.center}>
-        {t('credits')}
+        <a className={styles.link} href="https://kodeneko.com" rel="noreferrer" target="_blank">{t('credits')}</a>
       </div>
       <ul className={styles.right}>
-        <li><a href="#">{t('terms')}</a></li>
-        <li><a href="#">{t('privacy')}</a></li>
+        <li><a className={styles.link} href="#">{t('terms')}</a></li>
+        <li><a className={styles.link} href="#">{t('privacy')}</a></li>
       </ul>
     </div>
   );

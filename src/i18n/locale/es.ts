@@ -3,7 +3,7 @@ export default {
     sub: 'We Contact You!',
     title: 'Contact'
   },
-  credits: '© Web created by Kodeneko',
+  credits: '© Created by Kodeneko',
   doctorsSec: {
     sub: 'Our Doctors',
     title: 'Team'

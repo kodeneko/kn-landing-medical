@@ -12,17 +12,28 @@
   font-size: 1.5rem;
 }
 
+.left {
+  flex-basis: 26rem;
+}
+
+.center {
+  text-align: center;
+  flex-grow: 1;
+}
+
 .right {
+  flex-basis: 26rem;
   display: flex;
+  justify-content: flex-end;
   gap: 1.25rem;
+}
 
-  li a {
-    transition: all 0.3s;
+.link {
+  transition: all 0.3s;
 
-    &:hover {
-      cursor: pointer;
-      color: @color-light;
-    }
+  &:hover {
+    cursor: pointer;
+    color: @color-light;
   }
 }
 
@@ -35,5 +46,10 @@
   .right {
     flex-direction: column;
     align-items: center;
+  }
+
+  .left,
+  .right {
+    flex-basis: 100%;
   }
 }
