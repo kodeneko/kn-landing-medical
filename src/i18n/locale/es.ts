@@ -68,7 +68,7 @@ export default {
         dent01: 'Pariatur id ea elit',
         dent02: 'Ex quis deserunt',
         sp01: 'Cupidatat sit proident',
-        sp02: 'laborum consequat',
+        sp02: 'Laborum consequat',
         sp03: 'Laboris et nulla',
         sp04: 'Commodo qui veniam',
         sp05: 'In ipsum ipsum'
