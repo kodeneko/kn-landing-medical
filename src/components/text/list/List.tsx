@@ -4,9 +4,10 @@ import styles from './style.module.less';
 import ListProps from './type';
 
 const List = ({ inverse = false, list = [] }: ListProps) => {
-  const styleList = clsx(styles.list, styles[inverse
-    ? 'inv'
-    : 'reg']);
+  const styleList = clsx(
+    styles.list,
+    styles[inverse ? 'inv' : 'reg']
+  );
   return (
     <ul className={styleList}>
       {list.map((ele, i) => (

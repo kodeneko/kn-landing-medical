@@ -6,9 +6,9 @@ import { FormType } from '@models/app';
 import clsx from 'clsx';
 
 import styles from './style.module.less';
-import CasdPricingProps from './type';
+import CardPricingProps from './type';
 
-const CasdPricing = ({
+const CardPricing = ({
   grad = false,
   icon,
   onClick,
@@ -17,11 +17,12 @@ const CasdPricing = ({
   specs,
   symbol,
   title
-}: CasdPricingProps) => {
+}: CardPricingProps) => {
   const t = getT();
-  const stylePricing = clsx(styles.pricing, styles[grad
-    ? 'grad'
-    : 'shadow']);
+  const stylePricing = clsx(
+    styles.pricing,
+    styles[grad ? 'grad' : 'shadow']
+  );
   return (
     <div className={stylePricing}>
       <header className={styles.header}>
@@ -37,8 +38,8 @@ const CasdPricing = ({
       <div className={styles.body}>
         <div className={styles.priceInfo}>
           <div className={styles.price}>
-            <span className={styles.qty}>{ price}</span>
-            <span className={styles.symbol}>{ symbol}</span>
+            <span className={styles.qty}>{price}</span>
+            <span className={styles.symbol}>{symbol}</span>
           </div>
           <div className={styles.period}>
             <span>/</span>
@@ -62,4 +63,4 @@ const CasdPricing = ({
   );
 };
 
-export default CasdPricing;
+export default CardPricing;

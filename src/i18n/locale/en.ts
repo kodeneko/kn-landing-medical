@@ -3,7 +3,7 @@ export default {
     sub: 'We Contact You!',
     title: 'Contact'
   },
-  credits: '© Web created by Kodeneko',
+  credits: '© Created by Kodeneko',
   doctorsSec: {
     sub: 'Our Doctors',
     title: 'Team'
@@ -64,13 +64,13 @@ export default {
     dental: { title: 'SupDent' },
     full: { title: 'Complete' },
     specs: {
-      dent01: 'dolro amet',
-      dent02: 'dolro amet',
-      sp01: 'lorem ipsum lorem',
-      sp02: 'lorem ipsum lorem',
-      sp03: 'lorem ipsum lorem',
-      sp04: 'lorem ipsum lorem',
-      sp05: 'lorem ipsum lorem'
+      dent01: 'Pariatur id ea elit',
+      dent02: 'Ex quis deserunt',
+      sp01: 'Cupidatat sit proident',
+      sp02: 'Laborum consequat',
+      sp03: 'Laboris et nulla',
+      sp04: 'Commodo qui veniam',
+      sp05: 'In ipsum ipsum'
     }
   },
   pricingSec: {
@@ -104,11 +104,15 @@ export default {
     sub: 'Our Medical Services',
     title: 'Services'
   },
+  specialists: {
+    familyDoctor: 'Family Doctor',
+    podiatrist: 'Podiatrist',
+    urologist: 'Urologist'
+  },
   symbol: '$',
   terms: 'Terms & Conditions',
   welcomeSec: {
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus.',
     title: 'Healthcare Solutions'
   }
-
 };

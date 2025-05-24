@@ -1,5 +1,5 @@
 type CardDoctorProps = { name: string
   pic: string
-  surname: string };
+  specialist: string };
 
 export default CardDoctorProps;

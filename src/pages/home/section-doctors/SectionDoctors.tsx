@@ -22,7 +22,7 @@ const SectionContact = () => {
               <CardDoctor
                 name={d.name}
                 pic={`/doctors/${d.pic}`}
-                surname={d.specialist}
+                specialist={t(`specialists.${d.specialist}`)}
               />
             </li>
           ))}

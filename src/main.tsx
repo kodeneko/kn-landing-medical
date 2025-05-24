@@ -2,6 +2,7 @@ import '@assets/styles/global.less';
 
 import './fontawesome.ts';
 
+import NotiStack from '@components/notification/NotiStack.tsx';
 import { getI18n } from '@i18n/index.ts';
 import { reduxStore } from '@store/index';
 import React from 'react';
@@ -18,5 +19,6 @@ ReactDOM.createRoot(document.getElementById('root') as Container).render(
     <Provider store={reduxStore}>
       <RouterProvider router={router} />
     </Provider>
+    <NotiStack />
   </React.StrictMode>
 );

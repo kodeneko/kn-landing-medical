@@ -3,29 +3,32 @@ import { useMediaMobile } from '@hooks/useMedia';
 import { getT } from '@i18n/index';
 import { SizeType } from '@models/app';
 import { useFormik } from 'formik';
-import { z } from 'zod';
 import { toFormikValidationSchema } from 'zod-formik-adapter';
 
+import { ContactFormModel, ContactFormProps, contactSchema } from './models';
 import styles from './style.module.less';
-import ContactFormProps from './type';
+
+const contactInit: ContactFormModel = {
+  mail: ''
+};
 
 const ContactForm = ({
-  onChange,
-  val
+  onChange
 }: ContactFormProps) => {
   const t = getT();
   const isMobile = useMediaMobile();
-  const schema = z.object({ mail: z.string().email(t('msg.errorMail')) });
-  const formik = useFormik({
-    initialValues: { mail: val },
-    onSubmit: vals => {
-      onChange(vals.mail);
-    },
-    validationSchema: toFormikValidationSchema(schema)
+  const formik = useFormik<ContactFormModel>({
+    initialValues: contactInit,
+    onSubmit: onChange,
+    validationSchema: toFormikValidationSchema(contactSchema)
   });
   return (
     <div className={styles.cont}>
-      <form>
+      <form onSubmit={e => {
+        e.preventDefault();
+        formik.handleSubmit();
+      }}
+      >
         <Field
           hint={formik.touched.mail ? formik.errors.mail : ''}
           id="mail"
@@ -37,7 +40,6 @@ const ContactForm = ({
         />
         <Button
           fullWide={isMobile}
-          onClick={() => formik.submitForm()}
           secondary={true}
           size={SizeType.LG}
         >

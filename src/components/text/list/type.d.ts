@@ -1,6 +1,6 @@
 type ListProps = {
   inverse?: boolean
-  list: string[]
+  list: JSX.Element[] | string[]
 };
 
 export default ListProps;

@@ -34,12 +34,10 @@ const SectionPricing = () => {
                 price={p.price}
                 specs={p.spec.map(s => (
                   <span
-                    className={s.included
-                      ? styles.not
-                      : styles.line}
+                    className={s.included ? styles.not : styles.line}
                     key={s.id}
                   >
-                    {t(`specs.${s.id}`)}
+                    {t(`pricing.specs.${s.id}`)}
                   </span>
                 ))}
                 symbol={t('symbol')}
