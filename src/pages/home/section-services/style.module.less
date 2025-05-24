@@ -5,6 +5,7 @@
   flex-direction: column;
   padding: 3.75rem 2rem;
   padding-bottom: 7.5rem;
+  align-items: center;
 }
 
 .body {
@@ -12,15 +13,19 @@
   display: flex;
   align-items: center;
   gap: 3.75rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  max-width: 80rem;
 
   .menu {
-    flex-shrink: 1;
+    flex-grow: 1;
+  }
+
+  .picWrap {
+    flex-basis: 90rem;
   }
 
   .info {
-    flex: 1;
-    align-self: flex-start;
+    flex-grow: 1;
   }
 }
 
