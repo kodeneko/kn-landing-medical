@@ -38,8 +38,8 @@ const CardPricing = ({
       <div className={styles.body}>
         <div className={styles.priceInfo}>
           <div className={styles.price}>
-            <span className={styles.qty}>{ price}</span>
-            <span className={styles.symbol}>{ symbol}</span>
+            <span className={styles.qty}>{price}</span>
+            <span className={styles.symbol}>{symbol}</span>
           </div>
           <div className={styles.period}>
             <span>/</span>

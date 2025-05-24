@@ -64,13 +64,13 @@ export default {
     dental: { title: 'SupDent' },
     full: { title: 'Complete' },
     specs: {
-      dent01: 'dolro amet',
-      dent02: 'dolro amet',
-      sp01: 'lorem ipsum lorem',
-      sp02: 'lorem ipsum lorem',
-      sp03: 'lorem ipsum lorem',
-      sp04: 'lorem ipsum lorem',
-      sp05: 'lorem ipsum lorem'
+      dent01: 'Pariatur id ea elit',
+      dent02: 'Ex quis deserunt',
+      sp01: 'Cupidatat sit proident',
+      sp02: 'laborum consequat',
+      sp03: 'Laboris et nulla',
+      sp04: 'Commodo qui veniam',
+      sp05: 'In ipsum ipsum'
     }
   },
   pricingSec: {
