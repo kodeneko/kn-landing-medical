@@ -18,7 +18,7 @@ const MainLayout: React.FC = () => {
         animate={{ opacity: 1, translateY: 0 }}
         className={styles.mainBar}
         initial={{ opacity: 0, translateY: -100 }}
-        transition={{ duration: 1 }}
+        transition={{ delay: 0.5, duration: 1 }}
       >
         { isTablet || isMobile
           ? <MainBarMobile />
