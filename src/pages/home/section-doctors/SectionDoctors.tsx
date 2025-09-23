@@ -29,7 +29,7 @@ const SectionContact = () => {
     <div className={styles.cont}>
       <m.div
         initial={{ opacity: 0 }}
-        transition={{ delay: 0.3, duration: 1 }}
+        transition={{ delay: 0.5, duration: 1 }}
         viewport={{ amount: 'some', once: true }}
         whileInView={{ opacity: 1 }}
       >

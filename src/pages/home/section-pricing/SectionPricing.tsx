@@ -3,7 +3,7 @@ import { Title } from '@components/text';
 import { priceList } from '@globals/pricing';
 import { getT } from '@i18n/index';
 import { Price } from '@models/Price';
-import { motion as m, stagger } from 'motion/react';
+import { motion as m } from 'motion/react';
 import { useState } from 'react';
 
 import styles from './style.module.less';
@@ -15,7 +15,7 @@ const SectionPricing = () => {
     <div className={styles.cont}>
       <m.div
         initial={{ opacity: 0 }}
-        transition={{ delay: 0.3, duration: 1 }}
+        transition={{ delay: 0.5, duration: 1 }}
         viewport={{ amount: 'some', once: true }}
         whileInView={{ opacity: 1 }}
       >
