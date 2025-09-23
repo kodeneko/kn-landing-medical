@@ -74,7 +74,7 @@ const SectionServices = () => {
           && (
             <m.div
               className={styles.info}
-              initial={{ opacity: 0, translateX: 100 }}
+              initial={{ opacity: 0, translateX: 50 }}
               transition={{ delay: 0.3, duration: 1 }}
               viewport={{ amount: 'some', once: true }}
               whileInView={{ opacity: 1, translateX: 0 }}

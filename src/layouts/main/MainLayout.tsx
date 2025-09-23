@@ -25,7 +25,14 @@ const MainLayout: React.FC = () => {
           : <MainBar /> }
       </m.div>
       <div className={styles.mainCont}><Outlet /></div>
-      <div className={styles.mainFooter}><MainFooter /></div>
+      <m.div
+        animate={{ opacity: 1, translateY: 0 }}
+        className={styles.mainFooter}
+        initial={{ opacity: 0, translateY: 50 }}
+        transition={{ delay: 0.5, duration: 1 }}
+      >
+        <MainFooter />
+      </m.div>
     </div>
   );
 };

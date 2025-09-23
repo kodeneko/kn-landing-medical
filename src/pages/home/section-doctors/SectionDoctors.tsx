@@ -64,7 +64,7 @@ const SectionContact = () => {
         className={styles.footer}
         initial={{ opacity: 0, scale: 0 }}
         transition={{ delay: 0.3, duration: 1 }}
-        viewport={{ amount: 'some', once: true }}
+        viewport={{ once: true }}
         whileInView={{ opacity: 1, scale: 1 }}
       >
         <Button size={SizeType.LG}>
