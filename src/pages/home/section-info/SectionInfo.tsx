@@ -1,3 +1,5 @@
+import type { Variants } from 'motion/react';
+
 import { CardInfo } from '@components/card';
 import { Button } from '@components/form';
 import { Desc } from '@components/text';
@@ -5,9 +7,7 @@ import { InfoMenu, OpeningInfoOpt } from '@globals/info';
 import { useMediaMobile } from '@hooks/useMedia';
 import { getT } from '@i18n/index';
 import { MenuOption } from '@models/app';
-import {
-  delay, motion as m, stagger, Variants
-} from 'motion/react';
+import { motion as m, stagger } from 'motion/react';
 
 import styles from './style.module.less';
 
@@ -56,20 +56,28 @@ const varFather: Variants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
-    transition: { delayChildren: stagger(0.7, { startDelay: 0.5 }) }
+    transition: { delayChildren: stagger(0.5, { startDelay: 0.5 }) }
   }
 };
 
 const varChild: Variants = {
   hidden: { opacity: 0, translateX: -50 },
-  show: { opacity: 1, transition: { duration: 0.7, ease: 'easeOut' }, translateX: 0 }
+  show: { opacity: 1, transition: { duration: 0.5, ease: 'easeOut' }, translateX: 0 }
 };
 
 const SectionInfoMobile = () => {
   return (
-    <m.ul animate="show" className={styles.galMobile} initial="hidden" variants={varFather}>
+    <m.ul
+      animate="show"
+      className={styles.galMobile}
+      initial="hidden"
+      variants={varFather}
+    >
       {InfoMenu.map(s => (
-        <m.li key={s.id} variants={varChild}>
+        <m.li
+          key={s.id}
+          variants={varChild}
+        >
           <CardInfoEle
             icon={s.icon}
             id={s.id}
@@ -77,7 +85,10 @@ const SectionInfoMobile = () => {
           />
         </m.li>
       ))}
-      <m.li key="time" variants={varChild}>
+      <m.li
+        key="time"
+        variants={varChild}
+      >
         <CardInfoTime />
       </m.li>
     </m.ul>
@@ -86,12 +97,24 @@ const SectionInfoMobile = () => {
 
 const SectionInfoWeb = () => {
   return (
-    <m.ul className={styles.galWeb} initial="hidden" variants={varFather} viewport={{ amount: 'some', once: true }} whileInView="show">
-      <m.li key="time" variants={varChild}>
+    <m.ul
+      className={styles.galWeb}
+      initial="hidden"
+      variants={varFather}
+      viewport={{ amount: 'some', once: true }}
+      whileInView="show"
+    >
+      <m.li
+        key="time"
+        variants={varChild}
+      >
         <CardInfoTime />
       </m.li>
       {InfoMenu.map(s => (
-        <m.li key={s.id} variants={varChild}>
+        <m.li
+          key={s.id}
+          variants={varChild}
+        >
           <CardInfoEle
             icon={s.icon}
             id={s.id}

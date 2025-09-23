@@ -34,14 +34,25 @@ const SectionServices = () => {
   };
   return (
     <div className={styles.cont}>
-      <m.div initial={{ opacity: 0 }} transition={{ delay: 0.3, duration: 1 }} viewport={{ amount: 'some', once: true }} whileInView={{ opacity: 1 }}>
+      <m.div
+        initial={{ opacity: 0 }}
+        transition={{ delay: 0.3, duration: 1 }}
+        viewport={{ amount: 'some', once: true }}
+        whileInView={{ opacity: 1 }}
+      >
         <Title
           subTitle={t('servicesSec.sub')}
           title={t('servicesSec.title')}
         />
       </m.div>
       <div className={styles.body}>
-        <m.div className={styles.menu} initial={{ opacity: 0, translateX: -100 }} transition={{ delay: 0.3, duration: 1 }} viewport={{ amount: 'some', once: true }} whileInView={{ opacity: 1, translateX: 0 }}>
+        <m.div
+          className={styles.menu}
+          initial={{ opacity: 0, translateX: -100 }}
+          transition={{ delay: 0.3, duration: 1 }}
+          viewport={{ amount: 'some', once: true }}
+          whileInView={{ opacity: 1, translateX: 0 }}
+        >
           <SelectorCapsule
             onClick={handleClick}
             options={servMenu}
@@ -49,13 +60,25 @@ const SectionServices = () => {
         </m.div>
         {isWeb
           && (
-            <m.div className={styles.picWrap} initial={{ opacity: 0 }} transition={{ delay: 0.3, duration: 1 }} viewport={{ amount: 'some', once: true }} whileInView={{ opacity: 1 }}>
+            <m.div
+              className={styles.picWrap}
+              initial={{ opacity: 0 }}
+              transition={{ delay: 0.3, duration: 1 }}
+              viewport={{ amount: 'some', once: true }}
+              whileInView={{ opacity: 1 }}
+            >
               <img src={`/services/${opSel.pic}`} />
             </m.div>
           )}
         {(isWeb || isTablet)
           && (
-            <m.div className={styles.info} initial={{ opacity: 0, translateX: 100 }} transition={{ delay: 0.3, duration: 1 }} viewport={{ amount: 'some', once: true }} whileInView={{ opacity: 1, translateX: 0 }}>
+            <m.div
+              className={styles.info}
+              initial={{ opacity: 0, translateX: 100 }}
+              transition={{ delay: 0.3, duration: 1 }}
+              viewport={{ amount: 'some', once: true }}
+              whileInView={{ opacity: 1, translateX: 0 }}
+            >
               <InfoService
                 desc={t(`services.${opSel.id}.desc`)}
                 onClick={() => console.log(opSel.id)}
