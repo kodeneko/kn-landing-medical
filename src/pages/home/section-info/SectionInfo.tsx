@@ -56,7 +56,7 @@ const varFather: Variants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
-    transition: { delayChildren: stagger(0.5, { startDelay: 0.5 }) }
+    transition: { delayChildren: stagger(0.5, { startDelay: 0.3 }) }
   }
 };
 
