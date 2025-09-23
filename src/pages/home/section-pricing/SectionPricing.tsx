@@ -3,6 +3,7 @@ import { Title } from '@components/text';
 import { priceList } from '@globals/pricing';
 import { getT } from '@i18n/index';
 import { Price } from '@models/Price';
+import { motion as m } from 'motion/react';
 import { useState } from 'react';
 
 import styles from './style.module.less';
@@ -12,14 +13,25 @@ const SectionPricing = () => {
   const [pricing, setPricing] = useState<Price>(priceList[1]);
   return (
     <div className={styles.cont}>
-      <div className={styles.header}>
+      <m.div
+        initial={{ opacity: 0 }}
+        transition={{ delay: 0.3, duration: 1 }}
+        viewport={{ amount: 'some', once: true }}
+        whileInView={{ opacity: 1 }}
+      >
         <Title
           subTitle={t('pricingSec.sub')}
           title={t('pricingSec.title')}
         />
-      </div>
+      </m.div>
       <div className={styles.body}>
-        <ul className={styles.gallery}>
+        <m.ul
+          className={styles.gallery}
+          initial={{ opacity: 0, translateY: 100 }}
+          transition={{ delay: 0.3, duration: 1 }}
+          viewport={{ amount: 'some', once: true }}
+          whileInView={{ opacity: 1, translateY: 0 }}
+        >
           {priceList.map(p => (
             <li
               className={styles.ele}
@@ -45,7 +57,7 @@ const SectionPricing = () => {
               />
             </li>
           ))}
-        </ul>
+        </m.ul>
       </div>
     </div>
   );

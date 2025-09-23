@@ -5,6 +5,7 @@ import { servMenu } from '@globals/services';
 import { useMediaTablet, useMediaWeb } from '@hooks/useMedia';
 import { getT } from '@i18n/index';
 import { ServiceOpt } from '@models/app';
+import { motion as m } from 'motion/react';
 import React, { useState } from 'react';
 
 import styles from './style.module.less';
@@ -33,32 +34,57 @@ const SectionServices = () => {
   };
   return (
     <div className={styles.cont}>
-      <Title
-        subTitle={t('servicesSec.sub')}
-        title={t('servicesSec.title')}
-      />
+      <m.div
+        initial={{ opacity: 0 }}
+        transition={{ delay: 0.3, duration: 1 }}
+        viewport={{ amount: 'some', once: true }}
+        whileInView={{ opacity: 1 }}
+      >
+        <Title
+          subTitle={t('servicesSec.sub')}
+          title={t('servicesSec.title')}
+        />
+      </m.div>
       <div className={styles.body}>
-        <div className={styles.menu}>
+        <m.div
+          className={styles.menu}
+          initial={{ opacity: 0, translateX: -100 }}
+          transition={{ delay: 0.3, duration: 1 }}
+          viewport={{ amount: 'some', once: true }}
+          whileInView={{ opacity: 1, translateX: 0 }}
+        >
           <SelectorCapsule
             onClick={handleClick}
             options={servMenu}
           />
-        </div>
+        </m.div>
         {isWeb
           && (
-            <div className={styles.picWrap}>
+            <m.div
+              className={styles.picWrap}
+              initial={{ opacity: 0 }}
+              transition={{ delay: 0.3, duration: 1 }}
+              viewport={{ amount: 'some', once: true }}
+              whileInView={{ opacity: 1 }}
+            >
               <img src={`/services/${opSel.pic}`} />
-            </div>
+            </m.div>
           )}
         {(isWeb || isTablet)
           && (
-            <div className={styles.info}>
+            <m.div
+              className={styles.info}
+              initial={{ opacity: 0, translateX: 50 }}
+              transition={{ delay: 0.3, duration: 1 }}
+              viewport={{ amount: 'some', once: true }}
+              whileInView={{ opacity: 1, translateX: 0 }}
+            >
               <InfoService
                 desc={t(`services.${opSel.id}.desc`)}
                 onClick={() => console.log(opSel.id)}
                 title={t(`services.${opSel.id}.title`)}
               />
-            </div>
+            </m.div>
           )}
       </div>
     </div>

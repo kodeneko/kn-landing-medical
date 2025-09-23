@@ -1,3 +1,5 @@
+import type { Variants } from 'motion/react';
+
 import { CardInfo } from '@components/card';
 import { Button } from '@components/form';
 import { Desc } from '@components/text';
@@ -5,6 +7,7 @@ import { InfoMenu, OpeningInfoOpt } from '@globals/info';
 import { useMediaMobile } from '@hooks/useMedia';
 import { getT } from '@i18n/index';
 import { MenuOption } from '@models/app';
+import { motion as m, stagger } from 'motion/react';
 
 import styles from './style.module.less';
 
@@ -49,41 +52,77 @@ const CardInfoEle = ({ icon, id, path }: MenuOption) => {
   );
 };
 
+const varFather: Variants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { delayChildren: stagger(0.5, { startDelay: 0.3 }) }
+  }
+};
+
+const varChild: Variants = {
+  hidden: { opacity: 0, translateX: -50 },
+  show: { opacity: 1, transition: { duration: 0.5, ease: 'easeOut' }, translateX: 0 }
+};
+
 const SectionInfoMobile = () => {
   return (
-    <ul className={styles.galMobile}>
+    <m.ul
+      animate="show"
+      className={styles.galMobile}
+      initial="hidden"
+      variants={varFather}
+    >
       {InfoMenu.map(s => (
-        <li key={s.id}>
+        <m.li
+          key={s.id}
+          variants={varChild}
+        >
           <CardInfoEle
             icon={s.icon}
             id={s.id}
             path={s.path}
           />
-        </li>
+        </m.li>
       ))}
-      <li>
+      <m.li
+        key="time"
+        variants={varChild}
+      >
         <CardInfoTime />
-      </li>
-    </ul>
+      </m.li>
+    </m.ul>
   );
 };
 
 const SectionInfoWeb = () => {
   return (
-    <ul className={styles.galWeb}>
-      <li>
+    <m.ul
+      className={styles.galWeb}
+      initial="hidden"
+      variants={varFather}
+      viewport={{ amount: 'some', once: true }}
+      whileInView="show"
+    >
+      <m.li
+        key="time"
+        variants={varChild}
+      >
         <CardInfoTime />
-      </li>
+      </m.li>
       {InfoMenu.map(s => (
-        <li key={s.id}>
+        <m.li
+          key={s.id}
+          variants={varChild}
+        >
           <CardInfoEle
             icon={s.icon}
             id={s.id}
             path={s.path}
           />
-        </li>
+        </m.li>
       ))}
-    </ul>
+    </m.ul>
   );
 };
 

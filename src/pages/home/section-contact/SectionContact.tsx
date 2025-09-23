@@ -3,6 +3,7 @@ import { ContactFormModel } from '@components/contact-form/models';
 import sendNoti from '@components/notification/useNoti';
 import { Title } from '@components/text';
 import { getT } from '@i18n/index';
+import { motion as m } from 'motion/react';
 
 import styles from './style.module.less';
 
@@ -16,18 +17,29 @@ const SectionContact = () => {
 
   return (
     <div className={styles.cont}>
-      <div className={styles.header}>
+      <m.div
+        initial={{ opacity: 0 }}
+        transition={{ delay: 0.3, duration: 1 }}
+        viewport={{ amount: 'some', once: true }}
+        whileInView={{ opacity: 1 }}
+      >
         <Title
           subTitle={t('contactSec.sub')}
           title={t('contactSec.title')}
         />
-      </div>
+      </m.div>
       <div className={styles.body}>
-        <div className={styles.wrap}>
+        <m.div
+          className={styles.wrap}
+          initial={{ opacity: 0, scale: 0 }}
+          transition={{ delay: 0.3, duration: 1 }}
+          viewport={{ amount: 'some', once: true }}
+          whileInView={{ opacity: 1, scale: 1 }}
+        >
           <ContactForm
             onChange={handleForm}
           />
-        </div>
+        </m.div>
       </div>
     </div>
   );

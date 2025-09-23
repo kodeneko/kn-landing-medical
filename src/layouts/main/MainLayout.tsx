@@ -1,5 +1,6 @@
 import { MainBar, MainBarMobile, MainFooter } from '@components/index';
 import { useMediaMobile, useMediaTablet } from '@hooks/useMedia';
+import { motion as m } from 'motion/react';
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 
@@ -8,16 +9,30 @@ import styles from './styles.module.less';
 const MainLayout: React.FC = () => {
   const isTablet = useMediaTablet();
   const isMobile = useMediaMobile();
-
+  console.log(isTablet, isMobile);
   return (
-    <div className={styles.cont}>
-      <div className={styles.mainBar}>
+    <div
+      className={styles.cont}
+    >
+      <m.div
+        animate={{ opacity: 1, translateY: 0 }}
+        className={styles.mainBar}
+        initial={{ opacity: 0, translateY: -100 }}
+        transition={{ delay: 0.3, duration: 1 }}
+      >
         { isTablet || isMobile
           ? <MainBarMobile />
           : <MainBar /> }
-      </div>
+      </m.div>
       <div className={styles.mainCont}><Outlet /></div>
-      <div className={styles.mainFooter}><MainFooter /></div>
+      <m.div
+        animate={{ opacity: 1, translateY: 0 }}
+        className={styles.mainFooter}
+        initial={{ opacity: 0, translateY: 50 }}
+        transition={{ delay: 0.3, duration: 1 }}
+      >
+        <MainFooter />
+      </m.div>
     </div>
   );
 };
