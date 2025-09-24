@@ -5,17 +5,15 @@ import { Title } from '@components/text';
 import useSaveRefSection from '@hooks/useSaveRefSection';
 import { getT } from '@i18n/index';
 import { Sections } from '@models/app';
-import { useUser } from '@store/zustand';
 import { motion as m } from 'motion/react';
-import { MutableRefObject, useEffect, useRef } from 'react';
+import { useRef } from 'react';
 
 import styles from './style.module.less';
 
 const SectionContact = () => {
   const t = getT();
   const ref = useRef<HTMLDivElement>(null);
-
-  useSaveRefSection(ref);
+  useSaveRefSection(ref, Sections.CONTACT);
 
   const handleForm = (contact: ContactFormModel) => {
     console.log(contact);
