@@ -2,15 +2,12 @@ import { Button } from '@components/form';
 import { Logo } from '@components/logo';
 import { mainMenu } from '@globals/menu';
 import { getT } from '@i18n/index';
-import { Sections } from '@models/app';
-import { useUser } from '@store/zustand';
+import { Link } from 'react-router-dom';
 
 import styles from './style.module.less';
 
 const MainBar = () => {
   const t = getT();
-  const scrollToSection = useUser(state => state.scrollToSection);
-  const handleClickOpt = (id: Sections) => scrollToSection(id);
 
   return (
     <div className={styles.cont}>
@@ -19,7 +16,7 @@ const MainBar = () => {
         <ul className={styles.menu}>
           {mainMenu.map(opt => (
             <li key={opt.id}>
-              <a href={`#${opt.id}`} onClick={() => handleClickOpt(opt.id)}>{t(`labels.${opt.id}`)}</a>
+              <Link to={`/${opt.id}`}>{t(`labels.${opt.id}`)}</Link>
             </li>
           ))}
         </ul>

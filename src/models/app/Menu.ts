@@ -2,7 +2,7 @@ import { Sections } from '@models/app';
 
 type MenuOption = {
   icon?: string
-  id: Sections
+  id: Sections | string
   path?: string
 };
 
