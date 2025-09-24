@@ -26,9 +26,10 @@ const menuOptServices: MenuOption = {
 const mainMenu = [
   menuOptInfo,
   menuOptServices,
-  menuOptContact,
   menuOptDoctor,
-  menuOptPricing
+  menuOptPricing,
+  menuOptContact
+
 ];
 
 export {
