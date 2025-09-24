@@ -41,6 +41,7 @@ export default {
     doctors: 'Doctors',
     findDoc: 'Find Doctor',
     hire: 'Hire',
+    info: 'Info',
     mail: 'Mail',
     med: 'Medicine',
     moreInfo: 'More Info',

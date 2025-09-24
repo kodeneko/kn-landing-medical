@@ -3,10 +3,11 @@ import { SelectorCapsule } from '@components/selector-capsule';
 import { Title } from '@components/text';
 import { servMenu } from '@globals/services';
 import { useMediaTablet, useMediaWeb } from '@hooks/useMedia';
+import useSaveRefSection from '@hooks/useSaveRefSection';
 import { getT } from '@i18n/index';
-import { ServiceOpt } from '@models/app';
+import { Sections, ServiceOpt } from '@models/app';
 import { motion as m } from 'motion/react';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 import styles from './style.module.less';
 import { InfoServiceProps } from './types';
@@ -26,14 +27,17 @@ const InfoService: React.FC<InfoServiceProps> = ({ desc, onClick, title }) => {
 
 const SectionServices = () => {
   const t = getT();
+  const ref = useRef<HTMLDivElement>(null);
+  useSaveRefSection(ref, Sections.SERVICES);
   const [opSel, setOpSel] = useState<ServiceOpt>(servMenu[0]);
   const isTablet = useMediaTablet();
   const isWeb = useMediaWeb();
   const handleClick = (id: string) => {
-    setOpSel(servMenu.find(op => op.id === id) as ServiceOpt);
+    setOpSel(servMenu.find((op: ServiceOpt) => op.id === id) as ServiceOpt);
   };
+
   return (
-    <div className={styles.cont}>
+    <div className={styles.cont} ref={ref}>
       <m.div
         initial={{ opacity: 0 }}
         transition={{ delay: 0.3, duration: 1 }}

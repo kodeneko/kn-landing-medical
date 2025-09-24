@@ -2,11 +2,13 @@ import { Button } from '@components/form';
 import { Logo } from '@components/logo';
 import { mainMenu } from '@globals/menu';
 import { getT } from '@i18n/index';
+import { Link } from 'react-router-dom';
 
 import styles from './style.module.less';
 
 const MainBar = () => {
   const t = getT();
+
   return (
     <div className={styles.cont}>
       <div className={styles.left}>
@@ -14,7 +16,7 @@ const MainBar = () => {
         <ul className={styles.menu}>
           {mainMenu.map(opt => (
             <li key={opt.id}>
-              <a href={`#${opt.id}`}>{t(`labels.${opt.id}`)}</a>
+              <Link to={`/${opt.id}`}>{t(`labels.${opt.id}`)}</Link>
             </li>
           ))}
         </ul>

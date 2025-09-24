@@ -5,9 +5,11 @@ import { Button } from '@components/form';
 import { Desc } from '@components/text';
 import { InfoMenu, OpeningInfoOpt } from '@globals/info';
 import { useMediaMobile } from '@hooks/useMedia';
+import useSaveRefSection from '@hooks/useSaveRefSection';
 import { getT } from '@i18n/index';
-import { MenuOption } from '@models/app';
+import { MenuOption, Sections } from '@models/app';
 import { motion as m, stagger } from 'motion/react';
+import { useRef } from 'react';
 
 import styles from './style.module.less';
 
@@ -73,7 +75,7 @@ const SectionInfoMobile = () => {
       initial="hidden"
       variants={varFather}
     >
-      {InfoMenu.map(s => (
+      {InfoMenu.map((s: MenuOption) => (
         <m.li
           key={s.id}
           variants={varChild}
@@ -110,7 +112,7 @@ const SectionInfoWeb = () => {
       >
         <CardInfoTime />
       </m.li>
-      {InfoMenu.map(s => (
+      {InfoMenu.map((s: MenuOption) => (
         <m.li
           key={s.id}
           variants={varChild}
@@ -128,8 +130,11 @@ const SectionInfoWeb = () => {
 
 const SectionInfo = () => {
   const isMobile = useMediaMobile();
+  const ref = useRef<HTMLDivElement>(null);
+  useSaveRefSection(ref, Sections.INFO);
+
   return (
-    <div className={styles.cont}>
+    <div className={styles.cont} ref={ref}>
       {isMobile
         ? <SectionInfoMobile />
         : <SectionInfoWeb />}

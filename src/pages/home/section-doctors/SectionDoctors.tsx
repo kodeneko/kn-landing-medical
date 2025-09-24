@@ -4,9 +4,11 @@ import { CardDoctor } from '@components/card';
 import { Button } from '@components/form';
 import { Title } from '@components/text';
 import { doctors } from '@globals/doctors';
+import useSaveRefSection from '@hooks/useSaveRefSection';
 import { getT } from '@i18n/index';
-import { SizeType } from '@models/app';
+import { Sections, SizeType } from '@models/app';
 import { motion as m, stagger } from 'motion/react';
+import { useRef } from 'react';
 
 import styles from './style.module.less';
 
@@ -23,10 +25,13 @@ const varChild: Variants = {
   show: { opacity: 1, transition: { duration: 0.5, ease: 'easeOut' }, translateX: 0 }
 };
 
-const SectionContact = () => {
+const SectionDoctors = () => {
   const t = getT();
+  const ref = useRef<HTMLDivElement>(null);
+  useSaveRefSection(ref, Sections.DOCTORS);
+
   return (
-    <div className={styles.cont}>
+    <div className={styles.cont} ref={ref}>
       <m.div
         initial={{ opacity: 0 }}
         transition={{ delay: 0.3, duration: 1 }}
@@ -75,4 +80,4 @@ const SectionContact = () => {
   );
 };
 
-export default SectionContact;
+export default SectionDoctors;
