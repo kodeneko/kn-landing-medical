@@ -18,7 +18,6 @@ export {
 } from './media';
 export {
   mainMenu,
-  menuOptAbout,
   menuOptContact,
   menuOptDoctor,
   menuOptPricing,

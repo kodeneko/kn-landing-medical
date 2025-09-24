@@ -1,41 +1,41 @@
-import { MenuOption } from '@models/app';
+import { MenuOption, Sections } from '@models/app';
 
 import paths from './paths';
 
-const menuOptAbout: MenuOption = {
-  id: 'about',
-  path: paths.pathAbout
+const menuOptInfo: MenuOption = {
+  id: Sections.INFO,
+  path: paths.pathInfo
 };
 const menuOptContact: MenuOption = {
-  id: 'contact',
+  id: Sections.CONTACT,
   path: paths.pathContact
 };
 const menuOptDoctor: MenuOption = {
-  id: 'doctors',
+  id: Sections.DOCTORS,
   path: paths.pathDoctors
 };
 const menuOptPricing: MenuOption = {
-  id: 'pricing',
+  id: Sections.PRICING,
   path: paths.pathPricing
 };
 const menuOptServices: MenuOption = {
-  id: 'services',
+  id: Sections.SERVICES,
   path: paths.pathServices
 };
 
 const mainMenu = [
-  menuOptAbout,
+  menuOptInfo,
+  menuOptServices,
   menuOptContact,
   menuOptDoctor,
-  menuOptPricing,
-  menuOptServices
+  menuOptPricing
 ];
 
 export {
   mainMenu,
-  menuOptAbout,
   menuOptContact,
   menuOptDoctor,
+  menuOptInfo,
   menuOptPricing,
   menuOptServices
 };

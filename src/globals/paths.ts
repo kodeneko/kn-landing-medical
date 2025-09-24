@@ -3,6 +3,7 @@ export default {
   pathAppointment: '/appoitment',
   pathContact: '/contact',
   pathDoctors: '/doctors',
+  pathInfo: '/info',
   pathPricing: '/pricing',
   pathServices: '/services'
 };

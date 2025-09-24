@@ -9,7 +9,7 @@ import styles from './styles.module.less';
 const MainLayout: React.FC = () => {
   const isTablet = useMediaTablet();
   const isMobile = useMediaMobile();
-  console.log(isTablet, isMobile);
+
   return (
     <div
       className={styles.cont}
