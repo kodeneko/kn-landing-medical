@@ -2,7 +2,7 @@ import { CardPricing } from '@components/card';
 import { Title } from '@components/text';
 import { priceList } from '@globals/pricing';
 import useSaveRefSection from '@hooks/useSaveRefSection';
-import { getT } from '@i18n/index';
+import i18n from '@i18n/index';
 import { Sections } from '@models/app';
 import { Price } from '@models/Price';
 import { motion as m } from 'motion/react';
@@ -11,7 +11,7 @@ import { useRef, useState } from 'react';
 import styles from './style.module.less';
 
 const SectionPricing = () => {
-  const t = getT();
+  const { t } = i18n;
   const [pricing, setPricing] = useState<Price>(priceList[1]);
   const ref = useRef<HTMLDivElement>(null);
   useSaveRefSection(ref, Sections.PRICING);

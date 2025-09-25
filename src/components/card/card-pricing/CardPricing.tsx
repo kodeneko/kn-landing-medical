@@ -1,7 +1,7 @@
 import { BadgeIcon } from '@components/badge-icon';
 import { Button } from '@components/form';
 import { List } from '@components/text';
-import { getT } from '@i18n/index';
+import i18n from '@i18n/index';
 import { FormType } from '@models/app';
 import clsx from 'clsx';
 
@@ -18,7 +18,7 @@ const CardPricing = ({
   symbol,
   title
 }: CardPricingProps) => {
-  const t = getT();
+  const { t } = i18n;
   const stylePricing = clsx(
     styles.pricing,
     styles[grad ? 'grad' : 'shadow']

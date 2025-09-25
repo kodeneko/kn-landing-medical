@@ -5,7 +5,7 @@ import { Button } from '@components/form';
 import { Title } from '@components/text';
 import { doctors } from '@globals/doctors';
 import useSaveRefSection from '@hooks/useSaveRefSection';
-import { getT } from '@i18n/index';
+import i18n from '@i18n/index';
 import { Sections, SizeType } from '@models/app';
 import { motion as m, stagger } from 'motion/react';
 import { useRef } from 'react';
@@ -26,7 +26,7 @@ const varChild: Variants = {
 };
 
 const SectionDoctors = () => {
-  const t = getT();
+  const { t } = i18n;
   const ref = useRef<HTMLDivElement>(null);
   useSaveRefSection(ref, Sections.DOCTORS);
 

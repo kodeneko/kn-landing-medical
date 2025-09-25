@@ -1,6 +1,6 @@
 import { Button, Field } from '@components/form';
 import { useMediaMobile } from '@hooks/useMedia';
-import { getT } from '@i18n/index';
+import i18n from '@i18n/index';
 import { SizeType } from '@models/app';
 import { useFormik } from 'formik';
 import { toFormikValidationSchema } from 'zod-formik-adapter';
@@ -15,7 +15,7 @@ const contactInit: ContactFormModel = {
 const ContactForm = ({
   onChange
 }: ContactFormProps) => {
-  const t = getT();
+  const { t } = i18n;
   const isMobile = useMediaMobile();
   const formik = useFormik<ContactFormModel>({
     initialValues: contactInit,

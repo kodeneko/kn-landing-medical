@@ -4,7 +4,7 @@ import { Title } from '@components/text';
 import { servMenu } from '@globals/services';
 import { useMediaTablet, useMediaWeb } from '@hooks/useMedia';
 import useSaveRefSection from '@hooks/useSaveRefSection';
-import { getT } from '@i18n/index';
+import i18n from '@i18n/index';
 import { Sections, ServiceOpt } from '@models/app';
 import { motion as m } from 'motion/react';
 import React, { useRef, useState } from 'react';
@@ -13,7 +13,7 @@ import styles from './style.module.less';
 import { InfoServiceProps } from './types';
 
 const InfoService: React.FC<InfoServiceProps> = ({ desc, onClick, title }) => {
-  const t = getT();
+  const { t } = i18n;
   return (
     <div className={styles.infoService}>
       <h3 className={styles.title}>{title}</h3>
@@ -26,7 +26,7 @@ const InfoService: React.FC<InfoServiceProps> = ({ desc, onClick, title }) => {
 };
 
 const SectionServices = () => {
-  const t = getT();
+  const { t } = i18n;
   const ref = useRef<HTMLDivElement>(null);
   useSaveRefSection(ref, Sections.SERVICES);
   const [opSel, setOpSel] = useState<ServiceOpt>(servMenu[0]);

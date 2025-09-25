@@ -6,7 +6,7 @@ import { Desc } from '@components/text';
 import { InfoMenu, OpeningInfoOpt } from '@globals/info';
 import { useMediaMobile } from '@hooks/useMedia';
 import useSaveRefSection from '@hooks/useSaveRefSection';
-import { getT } from '@i18n/index';
+import i18n from '@i18n/index';
 import { MenuOption, Sections } from '@models/app';
 import { motion as m, stagger } from 'motion/react';
 import { useRef } from 'react';
@@ -14,7 +14,7 @@ import { useRef } from 'react';
 import styles from './style.module.less';
 
 const CardInfoTime = () => {
-  const t = getT();
+  const { t } = i18n;
   return (
     <CardInfo
       gradient={true}
@@ -36,7 +36,7 @@ const CardInfoTime = () => {
 };
 
 const CardInfoEle = ({ icon, id, path }: MenuOption) => {
-  const t = getT();
+  const { t } = i18n;
   return (
     <CardInfo
       actions={(

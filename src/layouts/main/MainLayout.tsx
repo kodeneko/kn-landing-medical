@@ -1,12 +1,25 @@
 import { MainBar, MainBarMobile, MainFooter } from '@components/index';
 import { useMediaMobile, useMediaTablet } from '@hooks/useMedia';
+import i18n from '@i18n/index';
 import { motion as m } from 'motion/react';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 
 import styles from './styles.module.less';
 
 const MainLayout: React.FC = () => {
+  const { t } = i18n;
+
+  useEffect(() => {
+    const onLanguageChanged = () => {
+      document.title = t('webTitle');
+    };
+    i18n.on('languageChanged', onLanguageChanged);
+    return () => {
+      i18n.off('languageChanged', onLanguageChanged);
+    };
+  }, [t, i18n]);
+
   const isTablet = useMediaTablet();
   const isMobile = useMediaMobile();
 

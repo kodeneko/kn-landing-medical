@@ -1,11 +1,11 @@
 import { Button } from '@components/form';
-import { getT } from '@i18n/index';
+import i18n from '@i18n/index';
 import { motion as m } from 'motion/react';
 
 import styles from './style.module.less';
 
 const SectionWelcome = () => {
-  const t = getT();
+  const { t } = i18n;
   return (
     <m.div
       animate={{ backgroundPosition: 'bottom -1rem right -4rem, bottom 0rem right 0rem', opacity: 1 }}

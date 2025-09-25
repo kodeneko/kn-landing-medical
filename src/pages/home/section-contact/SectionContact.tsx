@@ -3,7 +3,7 @@ import { ContactFormModel } from '@components/contact-form/models';
 import sendNoti from '@components/notification/useNoti';
 import { Title } from '@components/text';
 import useSaveRefSection from '@hooks/useSaveRefSection';
-import { getT } from '@i18n/index';
+import i18n from '@i18n/index';
 import { Sections } from '@models/app';
 import { motion as m } from 'motion/react';
 import { useRef } from 'react';
@@ -11,7 +11,7 @@ import { useRef } from 'react';
 import styles from './style.module.less';
 
 const SectionContact = () => {
-  const t = getT();
+  const { t } = i18n;
   const ref = useRef<HTMLDivElement>(null);
   useSaveRefSection(ref, Sections.CONTACT);
 

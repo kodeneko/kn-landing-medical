@@ -1,13 +1,13 @@
 import { BadgeIcon } from '@components/badge-icon';
 import { useMediaTablet } from '@hooks/useMedia';
-import { getT } from '@i18n/index';
+import i18n from '@i18n/index';
 import { FormType, SizeType } from '@models/app';
 
 import styles from './style.module.less';
 import SelectorCapsuleProps from './type';
 
 const SelectorCapsule = ({ onClick, options }: SelectorCapsuleProps) => {
-  const t = getT();
+  const { t } = i18n;
   const swMedia = useMediaTablet();
   return (
     <ul className={styles.menu}>
