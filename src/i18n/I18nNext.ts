@@ -1,4 +1,4 @@
-import { use as i18nextUse } from 'i18next';
+import { i18n, use as i18nextUse } from 'i18next';
 import { initReactI18next, useTranslation } from 'react-i18next';
 
 import I18n from './I18n';
@@ -22,6 +22,11 @@ class I18nNext implements I18n {
     i18n.changeLanguage(lang);
   }
 
+  public getI18n() {
+    const { i18n } = useTranslation();
+    return i18n;
+  }
+
   init() {
     i18nextUse(initReactI18next)
       .init({
@@ -33,6 +38,11 @@ class I18nNext implements I18n {
           es: { translation: es }
         }
       });
+  }
+
+  public lang() {
+    const { i18n } = useTranslation();
+    return i18n.language;
   }
 
   public t(): (key: string, opts?: { [key: string]: string }) => string {

@@ -19,10 +19,14 @@ function getT() {
   return getI18n().t();
 }
 
+function getLang() {
+  return getI18n().lang();
+}
+
 function initI18n() {
   getI18n().init();
 }
 
 export {
-  changeLang, getI18n, getT, initI18n
+  changeLang, getI18n, getLang, getT, initI18n
 };
