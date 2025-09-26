@@ -46,7 +46,7 @@ const DocumentPage: React.FC = () => {
     <div className={styles.cont}>
       {loading && <img src={spinner} />}
       {error && <p>{error}</p>}
-      {!loading && !error && <ReactMarkdown>{content}</ReactMarkdown>}
+      {!loading && !error && <div className={styles.doc}><ReactMarkdown>{content}</ReactMarkdown></div>}
     </div>
   );
 };
