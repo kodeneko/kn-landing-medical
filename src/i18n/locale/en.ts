@@ -8,6 +8,10 @@ export default {
     sub: 'Our Doctors',
     title: 'Team'
   },
+  errors: {
+    docNotFound: 'Document not found',
+    docNotLoad: 'The document could not be loaded'
+  },
   info: {
     appointment: {
       btn: 'Make',

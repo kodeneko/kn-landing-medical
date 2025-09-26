@@ -1,3 +1,4 @@
+export { default as DocumentPage } from './document/DocumentPage';
 export {
   HomePage,
   SectionContact,

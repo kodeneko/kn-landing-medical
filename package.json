@@ -28,6 +28,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-i18next": "^15.0.0",
+    "react-markdown": "^10.1.0",
     "react-router-dom": "^6.25.1",
     "redux": "^5.0.1",
     "the-new-css-reset": "^1.11.2",
@@ -81,6 +82,17 @@
   "eslintConfig": {
     "extends": [
       "plugin:storybook/recommended"
-    ]
+    ],
+    "rules": {
+      "object-curly-newline": [
+        "error",
+        {
+          "ImportDeclaration": {
+            "multiline": true,
+            "minProperties": 3
+          }
+        }
+      ]
+    }
   }
 }
