@@ -8,6 +8,10 @@ export default {
     sub: 'Our Doctors',
     title: 'Team'
   },
+  errors: {
+    docNotFound: 'Document not found',
+    docNotLoad: 'The document could not be loaded'
+  },
   info: {
     appointment: {
       btn: 'Make',
@@ -36,18 +40,21 @@ export default {
     about: 'About',
     appointment: 'Appointment',
     contact: 'Contact',
+    cookies: 'Cookies Policy',
     dental: 'Dental',
     diag: 'Diag. Tests',
     doctors: 'Doctors',
     findDoc: 'Find Doctor',
     hire: 'Hire',
     info: 'Info',
+    legal: 'Legal Notice',
     mail: 'Mail',
     med: 'Medicine',
     moreInfo: 'More Info',
     ophtha: 'Ophthalmology',
     ortho: 'orthophedic',
     pricing: 'Pricing',
+    privacy: 'Privacy Policy',
     recieveInfo: 'Recieve Info',
     sendMail: 'Send Mail',
     services: 'Services',
@@ -78,7 +85,6 @@ export default {
     sub: 'Our Prices',
     title: 'Hire'
   },
-  privacy: 'Privacy Policy',
   services: {
     dental: {
       desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit dictumst in ante elementum mauris erat turpiLorem ipsum dolor sit amet consectetur adipiscing elit dictumst in ante elementum mauris erat turpi',
@@ -111,7 +117,6 @@ export default {
     urologist: 'Urologist'
   },
   symbol: '$',
-  terms: 'Terms & Conditions',
   webTitle: 'Medical - Medical Services',
   welcomeSec: {
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus.',

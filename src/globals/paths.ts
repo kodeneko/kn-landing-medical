@@ -5,6 +5,9 @@ const pathDoctors = '/doctors';
 const pathInfo = '/info';
 const pathPricing = '/pricing';
 const pathServices = '/services';
+const pathCookies = '/cookies';
+const pathPrivacy = '/privacy';
+const pathLegal = '/legal';
 
 const paths = [
   pathAbout,
@@ -13,16 +16,22 @@ const paths = [
   pathDoctors,
   pathInfo,
   pathPricing,
-  pathServices
+  pathServices,
+  pathCookies,
+  pathPrivacy,
+  pathLegal
 ];
 
 export {
   pathAbout,
   pathAppointment,
   pathContact,
+  pathCookies,
   pathDoctors,
   pathInfo,
+  pathLegal,
   pathPricing,
+  pathPrivacy,
   paths,
   pathServices
 };
