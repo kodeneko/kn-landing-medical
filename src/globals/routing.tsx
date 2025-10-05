@@ -1,5 +1,5 @@
 import { MainLayout } from '@layouts/main';
-import { DocumentPage, HomePage } from '@pages/index';
+import { DocumentPage, HomePage, NotFoundPage } from '@pages/index';
 import { createBrowserRouter } from 'react-router-dom';
 
 import {
@@ -43,6 +43,10 @@ const router = createBrowserRouter([{
     {
       element: <DocumentPage />,
       path: pathLegal
+    },
+    {
+      element: <NotFoundPage />,
+      path: '*'
     }
   ],
   element: <MainLayout />,

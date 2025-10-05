@@ -10,7 +10,8 @@ export default {
   },
   errors: {
     docNotFound: 'Document not found',
-    docNotLoad: 'The document could not be loaded'
+    docNotLoad: 'The document could not be loaded',
+    pageNotFound: 'Page not found'
   },
   info: {
     appointment: {
@@ -39,6 +40,7 @@ export default {
   labels: {
     about: 'About',
     appointment: 'Appointment',
+    backToHome: 'Back to Home',
     contact: 'Contact',
     cookies: 'Cookies Policy',
     dental: 'Dental',
@@ -62,6 +64,11 @@ export default {
     yourMail: 'Your mail'
   },
   msg: { errorMail: 'The mail format is incorrect' },
+  notFound: {
+    desc: 'The page you are looking for does not exist or was moved',
+    subTitle: 'Error 404',
+    title: 'Not Found'
+  },
   period: {
     month: 'Month',
     year: 'Year'

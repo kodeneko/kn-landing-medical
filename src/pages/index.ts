@@ -8,3 +8,4 @@ export {
   SectionServices,
   SectionWelcome
 } from './home';
+export { NotFoundPage } from './not-found';

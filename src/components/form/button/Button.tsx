@@ -1,6 +1,7 @@
 import { BtnType, SizeType } from '@models/app';
 import clsx from 'clsx';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import styles from './style.module.less';
 import ButtonProps from './type';
@@ -25,7 +26,7 @@ const Button = ({
   return (
     type == BtnType.BTN
       ? <button className={stylesBtn} onClick={onClick}>{children}</button>
-      : <a className={stylesBtn} href={href ?? ''}>{children}</a>
+      : <Link className={stylesBtn} to={href ?? ''}>{children}</Link>
   );
 };
 

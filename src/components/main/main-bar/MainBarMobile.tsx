@@ -6,12 +6,14 @@ import i18n from '@i18n/index';
 import { FormType, SizeType } from '@models/app';
 import { AnimatePresence, motion as m } from 'motion/react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import styles from './style.module.less';
 
 const MainBarMobile = () => {
   const { t } = i18n;
   const [swMenu, setSwMenu] = useState(false);
+
   return (
     <div className={styles.wrap}>
       <AnimatePresence>
@@ -34,7 +36,12 @@ const MainBarMobile = () => {
               </li>
               {mainMenu.map(opt => (
                 <li key={opt.id}>
-                  <a href={`#${opt.id}`}>{t(`labels.${opt.id}`)}</a>
+                  <Link
+                    onClick={() => setSwMenu(false)}
+                    to={`/${opt.id}`}
+                  >
+                    {t(`labels.${opt.id}`)}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -46,7 +53,7 @@ const MainBarMobile = () => {
           <Logo />
         </div>
         <div className={styles.right}>
-          <button onClick={() => setSwMenu(!swMenu)}>
+          <button className={styles.btnMenu} onClick={() => setSwMenu(!swMenu)}>
             <BadgeIcon icon="fa-solid fa-bars" shape={FormType.SQUARE} />
           </button>
         </div>
