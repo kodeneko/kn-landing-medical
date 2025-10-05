@@ -1,6 +1,6 @@
 enum SizeType {
-  MD = 'md',
   LG = 'lg',
+  MD = 'md',
   XL = 'xl'
 }
 

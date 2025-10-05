@@ -1,7 +1,7 @@
 enum FormType {
-  SQUARE = 'square',
   CIRCLE = 'circle',
-  EMPTY = 'empty'
+  EMPTY = 'empty',
+  SQUARE = 'square'
 }
 
 export default FormType;

@@ -1,8 +1,6 @@
-import { BtnType, FormType, SizeType } from '@models/app';
-
 type ListProps = {
-  list: string[];
-  inverse?: boolean;
+  inverse?: boolean
+  list: JSX.Element[] | string[]
 };
 
 export default ListProps;

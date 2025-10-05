@@ -18,13 +18,21 @@ export {
 } from './media';
 export {
   mainMenu,
-  menuOptAbout,
   menuOptContact,
   menuOptDoctor,
   menuOptPricing,
   menuOptServices
 } from './menu';
-export { default as paths } from './paths';
+export {
+  pathAbout,
+  pathAppointment,
+  pathContact,
+  pathDoctors,
+  pathInfo,
+  pathPricing,
+  paths,
+  pathServices
+} from './paths';
 export {
   priceCopay,
   priceFull,

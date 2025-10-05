@@ -1,17 +1,18 @@
-import { BadgeIcon } from '@components/index';
-import { FormType, SizeType } from '@models/app';
 import type { Meta, StoryObj } from '@storybook/react';
 
+import { BadgeIcon } from '@components/index';
+import { FormType, SizeType } from '@models/app';
+
 const meta = {
-  argTypes: { },
   args: {
     icon: 'fa-solid fa-flask',
     shape: FormType.CIRCLE,
     size: SizeType.MD
   },
+  argTypes: { },
   component: BadgeIcon,
   parameters: { layout: 'centered' },
-  tags: [ 'autodocs' ],
+  tags: ['autodocs'],
   title: 'Common/BadgeIcon'
 } satisfies Meta<typeof BadgeIcon>;
 
@@ -29,4 +30,3 @@ export const ButtonInvert: Story = { args: { invert: true } };
 export const ButtonMd: Story = { args: { size: SizeType.MD } };
 
 export const ButtonLg: Story = { args: { size: SizeType.LG } };
-

@@ -1,5 +1,7 @@
+import type { PayloadAction } from '@reduxjs/toolkit';
+
 import { EnumLang, EnumTheme, User } from '@models/user';
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
 type UserStateType = User;
 
@@ -12,10 +14,10 @@ const userSlice = createSlice({
   initialState: userInitialState,
   name: 'user',
   reducers: {
-    changeLang (state: UserStateType, { payload }: PayloadAction<EnumLang>) {
+    changeLang(state: UserStateType, { payload }: PayloadAction<EnumLang>) {
       state.lang = payload;
     },
-    changeTheme (state: UserStateType, { payload }: PayloadAction<EnumTheme>) {
+    changeTheme(state: UserStateType, { payload }: PayloadAction<EnumTheme>) {
       state.theme = payload;
     }
   }

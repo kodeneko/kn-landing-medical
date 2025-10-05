@@ -1,21 +1,24 @@
 import { Logo } from '@components/logo';
-import { getT } from '@i18n/index';
+import { pathCookies, pathLegal, pathPrivacy } from '@globals/paths';
+import i18n from '@i18n/index';
+import { Link } from 'react-router-dom';
 
 import styles from './style.module.less';
 
 const MainFooter = () => {
-  const t = getT();
+  const { t } = i18n;
   return (
     <div className={styles.cont}>
       <div className={styles.left}>
         <Logo inverse />
       </div>
       <div className={styles.center}>
-        {t('credits')}
+        <a className={styles.link} href="https://kodeneko.com" rel="noreferrer" target="_blank">{t('credits')}</a>
       </div>
       <ul className={styles.right}>
-        <li><a href='#'>{t('terms')}</a></li>
-        <li><a href='#'>{t('privacy')}</a></li>
+        <li><Link className={styles.link} to={pathLegal}>{t('labels.legal')}</Link></li>
+        <li><Link className={styles.link} to={pathPrivacy}>{t('labels.privacy')}</Link></li>
+        <li><Link className={styles.link} to={pathCookies}>{t('labels.cookies')}</Link></li>
       </ul>
     </div>
   );

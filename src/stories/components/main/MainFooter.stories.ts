@@ -1,12 +1,13 @@
-import { MainFooter } from '@components/main';
 import type { Meta, StoryObj } from '@storybook/react';
 
+import { MainFooter } from '@components/main';
+
 const meta = {
-  argTypes: { backgroundColor: { control: 'color' } },
   args: { },
+  argTypes: { backgroundColor: { control: 'color' } },
   component: MainFooter,
   parameters: { layout: 'fullscreen' },
-  tags: [ 'autodocs' ],
+  tags: ['autodocs'],
   title: 'Main/Main Footer'
 } satisfies Meta<typeof MainFooter>;
 

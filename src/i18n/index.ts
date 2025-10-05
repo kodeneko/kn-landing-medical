@@ -1,26 +1,21 @@
-import I18nNext from './I18nNext';
+import i18n, { use as useI18n } from 'i18next';
+import { initReactI18next } from 'react-i18next';
 
-const { VITE_I18N: I18N } = import.meta.env;
+import { en, es } from './locale';
 
-function getI18n () {
-  switch (I18N) {
-    case 'i18next':
-      return I18nNext.getInstance();
-    default:
-      return I18nNext.getInstance();
-  }
-}
+const resources = {
+  en: { translation: en },
+  es: { translation: es }
+};
 
-function initI18n () {
-  getI18n().init();
-}
+useI18n(initReactI18next)
+  .init({
+    fallbackLng: 'en',
+    interpolation: {
+      escapeValue: false
+    },
+    lng: 'en',
+    resources
+  });
 
-function getT () {
-  return getI18n().t();
-}
-
-function changeLang (lang: string) {
-  return getI18n().changeLang(lang);
-}
-
-export { changeLang, getI18n, getT, initI18n };
+export default i18n;

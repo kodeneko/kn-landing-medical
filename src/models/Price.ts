@@ -3,17 +3,17 @@ enum EnumPeriod {
   YEAR = 'year'
 }
 
-interface Spec {
-  id: string;
-  included: boolean;
+interface Price {
+  icon: string
+  id: string
+  period: EnumPeriod
+  price: string
+  spec: Spec[]
 }
 
-interface Price {
-  id: string;
-  price: string;
-  period: EnumPeriod;
-  icon: string;
-  spec: Spec[];
+interface Spec {
+  id: string
+  included: boolean
 }
 
 export { EnumPeriod };
@@ -21,4 +21,3 @@ export type {
   Price,
   Spec
 };
-

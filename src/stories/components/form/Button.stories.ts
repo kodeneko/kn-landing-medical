@@ -1,13 +1,14 @@
-import { Button } from '@components/form';
-import { SizeType } from '@models/app';
 import type { Meta, StoryObj } from '@storybook/react';
 
+import { Button } from '@components/form';
+import { SizeType } from '@models/app';
+
 const meta = {
-  argTypes: { },
   args: { children: 'This is a Label' },
+  argTypes: { },
   component: Button,
   parameters: { layout: 'fullscreen' },
-  tags: [ 'autodocs' ],
+  tags: ['autodocs'],
   title: 'Form/Button'
 } satisfies Meta<typeof Button>;
 

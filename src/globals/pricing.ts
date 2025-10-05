@@ -46,15 +46,13 @@ const specsFull: Spec[] = [
   }
 ];
 
-const specsSupdent: Spec[] = [
-  {
-    id: 'dent01',
-    included: true
-  }, {
-    id: 'dent02',
-    included: true
-  }
-];
+const specsSupdent: Spec[] = [{
+  id: 'dent01',
+  included: true
+}, {
+  id: 'dent02',
+  included: true
+}];
 
 const priceCopay: Price = {
   icon: 'fa-solid fa-credit-card',
@@ -80,11 +78,7 @@ const priceSupdent: Price = {
   spec: specsSupdent
 };
 
-const priceList = [
-  priceCopay,
-  priceFull,
-  priceSupdent
-];
+const priceList = [priceCopay, priceFull, priceSupdent];
 
 export {
   priceCopay,

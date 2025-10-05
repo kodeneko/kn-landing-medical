@@ -16,11 +16,7 @@ const doctorUro: Doctor = {
   specialist: EnumSpecialist.UROLOGIST
 };
 
-const doctors: Doctor[] = [
-  doctorPodia,
-  doctorMed,
-  doctorUro
-];
+const doctors: Doctor[] = [doctorPodia, doctorMed, doctorUro];
 
 export {
   doctorMed,

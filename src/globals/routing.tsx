@@ -1,21 +1,56 @@
-/* eslint-disable sort-keys/sort-keys-fix */
-/* eslint-disable sort-keys */
-
 import { MainLayout } from '@layouts/main';
-import { HomePage } from '@pages/home';
+import { DocumentPage, HomePage, NotFoundPage } from '@pages/index';
 import { createBrowserRouter } from 'react-router-dom';
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <MainLayout />,
-    children: [
-      {
-        path: '/',
-        element: <HomePage />
-      }
-    ]
-  }
-]);
+import {
+  pathContact, pathCookies, pathDoctors, pathInfo, pathLegal, pathPricing, pathPrivacy, pathServices
+} from './paths';
+
+const router = createBrowserRouter([{
+  children: [
+    {
+      element: <HomePage />,
+      path: '/'
+    },
+    {
+      element: <HomePage />,
+      path: pathInfo
+    },
+    {
+      element: <HomePage />,
+      path: pathServices
+    },
+    {
+      element: <HomePage />,
+      path: pathDoctors
+    },
+    {
+      element: <HomePage />,
+      path: pathPricing
+    },
+    {
+      element: <HomePage />,
+      path: pathContact
+    },
+    {
+      element: <DocumentPage />,
+      path: pathCookies
+    },
+    {
+      element: <DocumentPage />,
+      path: pathPrivacy
+    },
+    {
+      element: <DocumentPage />,
+      path: pathLegal
+    },
+    {
+      element: <NotFoundPage />,
+      path: '*'
+    }
+  ],
+  element: <MainLayout />,
+  path: '/'
+}]);
 
 export default router;

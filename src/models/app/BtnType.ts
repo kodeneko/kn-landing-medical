@@ -1,6 +1,6 @@
 enum BtnType {
-  LINK = 'link',
-  BTN = 'btn'
+  BTN = 'btn',
+  LINK = 'link'
 }
 
 export default BtnType;

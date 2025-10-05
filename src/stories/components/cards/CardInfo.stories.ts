@@ -1,17 +1,18 @@
-import { CardInfo } from '@components/index';
 import type { Meta, StoryObj } from '@storybook/react';
 
+import { CardInfo } from '@components/index';
+
 const meta = {
-  argTypes: { },
   args: {
     children: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla.',
     gradient: false,
     icon: 'fa-solid fa-user-doctor',
     title: 'Find Doctors'
   },
+  argTypes: { },
   component: CardInfo,
   parameters: { layout: 'fullscreen' },
-  tags: [ 'autodocs' ],
+  tags: ['autodocs'],
   title: 'Card/CardInfo'
 } satisfies Meta<typeof CardInfo>;
 

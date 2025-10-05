@@ -8,7 +8,9 @@ import CardInfoProps from './type';
 
 type CardInfoPropsWithChildren = React.PropsWithChildren<CardInfoProps>;
 
-const CardInfo = ({ children, title, icon, gradient = false, actions }: CardInfoPropsWithChildren) => {
+const CardInfo = ({
+  actions, children, gradient = false, icon, title
+}: CardInfoPropsWithChildren) => {
   const contStyles = clsx(styles.cont, styles[gradient
     ? 'grad'
     : 'shadow']);
@@ -16,9 +18,13 @@ const CardInfo = ({ children, title, icon, gradient = false, actions }: CardInfo
     <div className={contStyles}>
       <header className={styles.header}>
         <div className={styles.title}>{title}</div>
-        <div className={styles.icon}><BadgeIcon icon={icon} shape={gradient
-          ? FormType.EMPTY
-          : FormType.SQUARE} />
+        <div className={styles.icon}>
+          <BadgeIcon
+            icon={icon}
+            shape={gradient
+              ? FormType.EMPTY
+              : FormType.SQUARE}
+          />
         </div>
       </header>
       <div className={styles.body}>{children}</div>

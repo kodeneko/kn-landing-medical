@@ -1,20 +1,24 @@
 import { Button } from '@components/form';
 import { Logo } from '@components/logo';
 import { mainMenu } from '@globals/menu';
-import { getT } from '@i18n/index';
+import i18n from '@i18n/index';
+import { Link } from 'react-router-dom';
 
 import styles from './style.module.less';
 
 const MainBar = () => {
-  const t = getT();
+  const { t } = i18n;
+
   return (
     <div className={styles.cont}>
       <div className={styles.left}>
         <Logo />
         <ul className={styles.menu}>
-          {mainMenu.map((opt) => <li key={opt.id}>
-            <a href={`#${opt.id}`}>{t(`labels.${opt.id}`)}</a>
-          </li>)}
+          {mainMenu.map(opt => (
+            <li key={opt.id}>
+              <Link to={`/${opt.id}`}>{t(`labels.${opt.id}`)}</Link>
+            </li>
+          ))}
         </ul>
       </div>
       <div className={styles.right}>

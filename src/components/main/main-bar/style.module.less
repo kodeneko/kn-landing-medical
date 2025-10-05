@@ -5,13 +5,13 @@
 .cont {
   width: 100%;
   display: flex;
-  padding: 1.25rem;
+  padding: 1.25rem 1.5rem;
   gap: 1.25rem;
 
   .left,
   .right {
     display: flex;
-    gap: 1.25rem;
+    gap: 2.5rem;
     align-items: center;
   }
 
@@ -27,7 +27,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 7.5rem;
+        padding: 0 0.7rem;
         height: 100%;
         text-align: center;
         transition: all 0.3s;
@@ -45,7 +45,8 @@
     flex-grow: 1;
     justify-content: flex-end;
 
-    button {
+    .btnMenu {
+      position: fixed;
       border-radius: 0.6rem;
       background-color: @color-blue;
       padding: 0.6rem 1.2rem;

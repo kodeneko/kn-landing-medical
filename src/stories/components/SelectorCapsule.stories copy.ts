@@ -1,13 +1,14 @@
-import { SelectorCapsule } from '@components/index';
-import { servMenu } from '@globals/services';
 import type { Meta, StoryObj } from '@storybook/react';
 
+import { SelectorCapsule } from '@components/index';
+import { servMenu } from '@globals/services';
+
 const meta = {
-  argTypes: { },
   args: { options: servMenu },
+  argTypes: { },
   component: SelectorCapsule,
   parameters: { layout: 'fullscreen' },
-  tags: [ 'autodocs' ],
+  tags: ['autodocs'],
   title: 'Common/SelectorCapsule'
 } satisfies Meta<typeof SelectorCapsule>;
 

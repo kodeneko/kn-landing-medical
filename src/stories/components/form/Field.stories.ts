@@ -1,17 +1,18 @@
-import { Field } from '@components/form';
 import type { Meta, StoryObj } from '@storybook/react';
 
+import { Field } from '@components/form';
+
 const meta = {
-  argTypes: { },
   args: {
     hint: 'hint',
     label: 'Field',
     placeH: 'name',
     value: 'name'
   },
+  argTypes: { },
   component: Field,
   parameters: { layout: 'centered' },
-  tags: [ 'autodocs' ],
+  tags: ['autodocs'],
   title: 'Form/Field'
 } satisfies Meta<typeof Field>;
 

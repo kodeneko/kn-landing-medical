@@ -1,3 +1,4 @@
+export { default as DocumentPage } from './document/DocumentPage';
 export {
   HomePage,
   SectionContact,
@@ -7,3 +8,4 @@ export {
   SectionServices,
   SectionWelcome
 } from './home';
+export { NotFoundPage } from './not-found';

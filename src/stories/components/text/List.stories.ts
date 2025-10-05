@@ -1,18 +1,13 @@
-import { List } from '@components/index';
 import type { Meta, StoryObj } from '@storybook/react';
 
+import { List } from '@components/index';
+
 const meta = {
+  args: { list: ['Lorem Ipsom lorem dolor amer', 'Lorem Ipsom lorem dolor amer', 'Lorem Ipsom lorem dolor amer'] },
   argTypes: { },
-  args: {
-    list: [
-      'Lorem Ipsom lorem dolor amer',
-      'Lorem Ipsom lorem dolor amer',
-      'Lorem Ipsom lorem dolor amer'
-    ]
-  },
   component: List,
   parameters: { layout: 'centered' },
-  tags: [ 'autodocs' ],
+  tags: ['autodocs'],
   title: 'Text/List'
 } satisfies Meta<typeof List>;
 
